@@ -1,0 +1,46 @@
+[{
+  "_id": {
+    "$oid": "5f97e692e15900004e0051f9"
+  },
+  "mathietbi": 1,
+  "tenthietbi": "Máy quạt Aisia",
+  "maphong": "9",
+  "tinhtrang": "Mới",
+  "soluong": "1"
+},{
+  "_id": {
+    "$oid": "5f97e6a1e15900004e0051fa"
+  },
+  "mathietbi": 2,
+  "tenthietbi": "Tủ lạnh Sanzo",
+  "maphong": "9",
+  "tinhtrang": "Mới",
+  "soluong": "1"
+},{
+  "_id": {
+    "$oid": "5f97e6b4e15900004e0051fb"
+  },
+  "mathietbi": 3,
+  "tenthietbi": "Tivi Samsung",
+  "maphong": "1",
+  "tinhtrang": "Đã sử dụng",
+  "soluong": "1"
+},{
+  "_id": {
+    "$oid": "5f97e6c2e15900004e0051fc"
+  },
+  "mathietbi": 4,
+  "tenthietbi": "Máy quạt Sanzo",
+  "maphong": "2",
+  "tinhtrang": "Cũ",
+  "soluong": "1"
+},{
+  "_id": {
+    "$oid": "5f97e6d3e15900004e0051fd"
+  },
+  "mathietbi": 5,
+  "tenthietbi": "Tủ lạnh Panasonic",
+  "maphong": "3",
+  "tinhtrang": "Mới",
+  "soluong": "1"
+}]
