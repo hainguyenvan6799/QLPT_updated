@@ -1,13 +1,13 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
-		// public function __construct(){
+		public function __construct(){
 			
-		// }
+		}
 		public function Home(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
 			$getFriends = $this->userModel->getFriendsOfUser($user_login);
-			$getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
+			// $getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
 			// 	'getFriends' => $getFriends,
 			// 	"page"=>"TrangChu/DSPT-TrangChu",
@@ -16,7 +16,7 @@
 			// ]);
 			print_r($user_login);
 			print_r($getNoFriends);
-			print_r($getNoFriends);
+			// print_r($getNoFriends);
 
 		}
 		public function XemChiTiet($maphong){
