@@ -9,7 +9,7 @@
 		public $mongoConnection;
 
 		public $connection;
-		protected $db;
+		public $db;
 		public static $userCollection;
 		public $messageCollection;
 		public $khachthueCollection;
