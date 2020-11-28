@@ -7,7 +7,9 @@
 	// echo $arr[1];
 require_once './mvc/core/vendor/autoload.php';
 $client = new MongoDB\Client(
-    'mongodb+srv://hai:X2L3zGTavujQkwLW@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
+    'mongodb+srv://hai:X2L3zGTavujQkwLW@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority');
 
-$db = $client->test;
+$db = $client->mongodb;
+	$userCollection = $db->test;
+	print_r($userCollection);
 ?>
