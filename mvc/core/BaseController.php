@@ -4,7 +4,7 @@
 		public static $Model;
 		public static $Model1;
 		public static $userModel;
-		// public static $test;
+		public static $test;
 		public static $messageModel;
 		public static $Model_phieuthu;
 		public static $Model_phongtro;
