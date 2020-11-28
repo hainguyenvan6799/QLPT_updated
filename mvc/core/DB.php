@@ -27,7 +27,7 @@
 			// $this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
 
 			// $this->connection = new MongoDB\Client(
-			// 	'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
+			// 	'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority'
 			// );
 			
 			// $this->db = $this->connection->phongtrodb;
