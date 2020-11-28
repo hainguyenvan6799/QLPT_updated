@@ -22,23 +22,24 @@
 
 		public function __construct()
 		{
-			$this->query = new MongoDB\Driver\Query($this->filter, $this->options);
-			$this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
+			echo 'Xin chao contruct db';
+			// $this->query = new MongoDB\Driver\Query($this->filter, $this->options);
+			// $this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
 
-			$this->connection = new MongoDB\Client(
-				'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
-			);
-			$this->db = $this->connection->phongtrodb;
+			// $this->connection = new MongoDB\Client(
+			// 	'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
+			// );
+			// $this->db = $this->connection->phongtrodb;
 			
-			self::$userCollection = $this->db->users;
-			$this->messageCollection = $this->db->message;
-			$this->khachthueCollection = $this->db->khachthue;
-			$this->phieuthutienCollection = $this->db->phieuthutien;
-			$this->phieuthuephongCollection = $this->db->phieuthuephong;
-			$this->phieutraphongCollection = $this->db->phieutraphong;
-			$this->phongtroCollection = $this->db->phongtro;
-			$this->thietbiCollection = $this->db->thietbi;
-			$this->lastIdCollection = $this->db->last_id_collection;
+			// self::$userCollection = $this->db->users;
+			// $this->messageCollection = $this->db->message;
+			// $this->khachthueCollection = $this->db->khachthue;
+			// $this->phieuthutienCollection = $this->db->phieuthutien;
+			// $this->phieuthuephongCollection = $this->db->phieuthuephong;
+			// $this->phieutraphongCollection = $this->db->phieutraphong;
+			// $this->phongtroCollection = $this->db->phongtro;
+			// $this->thietbiCollection = $this->db->thietbi;
+			// $this->lastIdCollection = $this->db->last_id_collection;
 		}
 
 	}
