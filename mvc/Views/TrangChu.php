@@ -5,6 +5,7 @@
     <style type="text/css">
     </style>
     <?php 
+        require_once "mvc/Views/base.php";
         require_once "mvc/Views/setup-link-and-script.php";
     ?>
     
