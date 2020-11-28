@@ -122,21 +122,23 @@
 		// mới sửa ngày 30/10/20208
 		public function getFriendsOfUser($user_login)
 		{
-			$abc = [];
-		    $arr = parent::$userCollection->aggregate([ 
-		    	['$unwind' => '$relationship'],
-		    	['$match' => [
-		    		'user_id' => (int)$user_login,
-		    		'relationship.status' => "f"
-		    	] ]
-		    	 ]);
-		    foreach($arr as $a)
-		    {
-		    	$b = $a->relationship->bsonSerialize();
-		    	// echo $b->friend_id . '<br>';
-		    	array_push($abc, $b->friend_id);
-		    }
-		    return $abc;
+			// $abc = [];
+		 //    $arr = parent::$userCollection->aggregate([ 
+		 //    	['$unwind' => '$relationship'],
+		 //    	['$match' => [
+		 //    		'user_id' => (int)$user_login,
+		 //    		'relationship.status' => "f"
+		 //    	] ]
+		 //    	 ]);
+		 //    foreach($arr as $a)
+		 //    {
+		 //    	$b = $a->relationship->bsonSerialize();
+		 //    	// echo $b->friend_id . '<br>';
+		 //    	array_push($abc, $b->friend_id);
+		 //    }
+		 //    return $abc;
+			$a = parent::$userCollection->find();
+			return $a;
 			// return "getFriendsOfUser";
 		}
 
