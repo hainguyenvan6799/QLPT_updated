@@ -13,7 +13,7 @@
 		// public static $Model_phieuthue;
 		// public static $Model_phieutra;
 		public function __construct(){
-			// self::$Model = $this->model('PhongTro');
+			self::$Model = $this->model('PhongTro');
 			self::$userModel = $this->model('User');
 
 			// self::$userModel = $this->model("User");
