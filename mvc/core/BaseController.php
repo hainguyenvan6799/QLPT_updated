@@ -4,7 +4,7 @@
 		public $Model;
 		public $Model1;
 		public $userModel;
-		public $test;
+		public static $test;
 		public $messageModel;
 		public $Model_phieuthu;
 		public $Model_phongtro;
@@ -12,8 +12,8 @@
 		public $Model_khachthue;
 		public $Model_phieuthue;
 		public $Model_phieutra;
-		public function __construct(){
-			$this->test = "testVar";
+		public static function __construct(){
+			self::$test = "testVar";
 			// $this->userModel = $this->model("User");
 			// $this->Model = $this->model("PhongTro");
 			// $this->Model1 = $this->model("ThietBi");
