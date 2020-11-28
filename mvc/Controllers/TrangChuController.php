@@ -2,10 +2,10 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
-			print_r($this->userModel);
+			
 		}
 		public function Home(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
+			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
 			// $getFriends = $this->userModel->getFriendsOfUser($user_login);
 			// $getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
@@ -14,7 +14,9 @@
 			// 	"data"=>$this->Model->XemDSPhong_Them_PhongTrong(),
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
-			print_r($user_login);
+
+			print_r($this->userModel);
+			// print_r($user_login);
 			// print_r($getFriends);
 			// print_r($getNoFriends);
 
