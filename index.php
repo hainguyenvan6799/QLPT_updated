@@ -11,5 +11,5 @@ $client = new MongoDB\Client(
 
 $db = $client->mongodb;
 	$test = $db->test;
-	print_r($userCollection);
+	print_r($test);
 ?>
