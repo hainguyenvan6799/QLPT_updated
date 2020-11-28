@@ -15,7 +15,7 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			print_r($user_login);
-			print_r($getNoFriends);
+			print_r($getFriends);
 			// print_r($getNoFriends);
 
 		}
