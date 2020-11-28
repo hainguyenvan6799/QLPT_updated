@@ -2,19 +2,19 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
-			echo "Hello nvh";
+			
 		}
 		public function Home(){
-			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			// $getFriends = $this->userModel->getFriendsOfUser($user_login);
-			// $getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
-			// $this->view("TrangChu",[
-			// 	'getFriends' => $getFriends,
-			// 	"page"=>"TrangChu/DSPT-TrangChu",
-			// 	"data"=>$this->Model->XemDSPhong_Them_PhongTrong(),
-			// 	'getNoFriends' => $getNoFriends
-			// ]);
-			echo 'hello';
+			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+			$getFriends = $this->userModel->getFriendsOfUser($user_login);
+			$getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
+			$this->view("TrangChu",[
+				'getFriends' => $getFriends,
+				"page"=>"TrangChu/DSPT-TrangChu",
+				"data"=>$this->Model->XemDSPhong_Them_PhongTrong(),
+				'getNoFriends' => $getNoFriends
+			]);
+			// echo 'hello';
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
