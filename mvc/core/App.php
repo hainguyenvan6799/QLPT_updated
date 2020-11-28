@@ -49,7 +49,7 @@
 				require_once "./mvc/Controllers/".$this->controller."Controller.php";
 				$homeobj = $this->controller . "Controller"; // Tên Controller
 				$this->controller = new $homeobj;
-				call_user_func_array([$this->controller, $this->action], $this->param);
+				// call_user_func_array([$this->controller, $this->action], $this->param);
 			}
 		}
 	}
