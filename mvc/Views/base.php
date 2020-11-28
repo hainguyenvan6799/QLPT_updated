@@ -1,1 +1,1 @@
-<base href="http://localhost:88/QuanLyPhongTro/">
+<base href="https://quanlyphongtrodn.herokuapp.com/">
