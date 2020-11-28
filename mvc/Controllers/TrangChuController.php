@@ -4,6 +4,7 @@
 		public static $a;
 		public function __construct(){
 			$this->a = $this->model("User");
+			print_r($this->userModel);
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
