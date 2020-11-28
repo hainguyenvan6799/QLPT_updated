@@ -5,15 +5,16 @@
 			parent::__construct();
 		}
 		public function Home(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
-			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
-			$getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
-			$this->view("TrangChu",[
-				'getFriends' => $getFriends,
-				"page"=>"TrangChu/DSPT-TrangChu",
-				"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
-				'getNoFriends' => $getNoFriends
-			]);
+			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
+			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
+			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
+			// $this->view("TrangChu",[
+			// 	'getFriends' => $getFriends,
+			// 	"page"=>"TrangChu/DSPT-TrangChu",
+			// 	"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
+			// 	'getNoFriends' => $getNoFriends
+			// ]);
+			echo 'Hello xin chòa';
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
