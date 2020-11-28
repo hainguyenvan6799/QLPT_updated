@@ -1,6 +1,9 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
+		public function __construct(){
+			echo "Hello nvh";
+		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
 			// $getFriends = $this->userModel->getFriendsOfUser($user_login);
