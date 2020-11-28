@@ -5,6 +5,7 @@
 		public function __construct(){
 			// $this->a = $this->model("User");
 			parent::__construct();
+			echo $this->test;
 
 		}
 		public static function Home(){
@@ -24,7 +25,7 @@
 			
 			echo "nguyen van hai";
 			// $this->a->test();
-			echo $this->test;
+			
 
 		}
 		public function XemChiTiet($maphong){
