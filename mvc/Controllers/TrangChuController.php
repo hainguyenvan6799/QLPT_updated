@@ -15,6 +15,7 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			parent::$userModel->test();
+			echo $getFriends;
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
