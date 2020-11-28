@@ -1,29 +1,29 @@
 <?php 
 	class BaseController
 	{
-		public $Model;
-		public $Model1;
-		public $userModel;
-		public static $test;
-		public $messageModel;
-		public $Model_phieuthu;
-		public $Model_phongtro;
-		public $Model_thietbi;
-		public $Model_khachthue;
-		public $Model_phieuthue;
-		public $Model_phieutra;
-		public function __construct(){
-			self::$test = "testVar";
-			// $this->userModel = $this->model("User");
-			// $this->Model = $this->model("PhongTro");
-			// $this->Model1 = $this->model("ThietBi");
-			// $this->messageModel = $this->model("Message");
-			// $this->Model_phieuthu = $this->model("phieuthu");
-			// $this->Model_phongtro = $this->model("PhongTro");
-			// $this->Model_thietbi = $this->model("ThietBi");
-			// $this->Model_khachthue = $this->model("KhachThue");
-			// $this->Model_phieuthue = $this->model("PhieuThue");
-			// $this->Model_phieutra = $this->model("PhieuTra");
+		public static $Model;
+		public static $Model1;
+		public static $userModel;
+		// public static $test;
+		public static $messageModel;
+		public static $Model_phieuthu;
+		public static $Model_phongtro;
+		public static $Model_thietbi;
+		public static $Model_khachthue;
+		public static $Model_phieuthue;
+		public static $Model_phieutra;
+		public static function __construct(){
+			// self::$test = "testVar";
+			self::$userModel = $this->model("User");
+			self::$Model = $this->model("PhongTro");
+			self::$Model1 = $this->model("ThietBi");
+			self::$messageModel = $this->model("Message");
+			self::$Model_phieuthu = $this->model("phieuthu");
+			self::$Model_phongtro = $this->model("PhongTro");
+			self::$Model_thietbi = $this->model("ThietBi");
+			self::$Model_khachthue = $this->model("KhachThue");
+			self::$Model_phieuthue = $this->model("PhieuThue");
+			self::$Model_phieutra = $this->model("PhieuTra");
 		}
 		public function model($model)
 		{
