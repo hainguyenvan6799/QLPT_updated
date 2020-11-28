@@ -14,6 +14,7 @@
 		// public static $Model_phieutra;
 		public static function __construct(){
 			self::$test = "testVar";
+			echo self::$test;
 			// self::$userModel = $this->model("User");
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");
