@@ -23,12 +23,12 @@
 			$this->Model_phieuthue = $this->model("PhieuThue");
 			$this->Model_phieutra = $this->model("PhieuTra");
 		}
-		public static function model($model)
+		public function model($model)
 		{
 			require_once "mvc/Models/".$model.".php";
 			return new $model;
 		}
-		public static static function view($view, $data = [])
+		public static function view($view, $data = [])
 		{
 			require_once "mvc/Views/".$view.".php";
 		}
