@@ -26,16 +26,16 @@
 			// $this->query = new MongoDB\Driver\Query($this->filter, $this->options);
 			// $this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
 
-			$this->connection = new MongoDB\Client(
+			$client = new MongoDB\Client(
 			    'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
 
-			$this->db = $connection->phongtrodb;
-			self::$userCollection = $this->db->users;
-			$users = self::$userCollection->find();
-			foreach($users as $u)
+			$db = $client->phongtrodb;
+			$testde = $db->test->find();
+			foreach($testde as $t)
 			{
-				echo $u->name . '<br>';
+				echo $t->ab;
 			}
+			
 			// $this->db = $this->connection->phongtrodb;
 			
 			// self::$userCollection = $this->db->users;
