@@ -5,7 +5,7 @@
 			
 		}
 		public function Home(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
 			// $getFriends = $this->userModel->getFriendsOfUser($user_login);
 			// $getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
