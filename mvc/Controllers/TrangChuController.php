@@ -2,7 +2,8 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
-			print_r($this->userModel::test());
+			$a = $this->userModel;
+			$a->test();
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
