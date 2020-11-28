@@ -1,8 +1,9 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
+		public $userModel;
 		public function __construct(){
-			$a = new BaseController;
+			
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';

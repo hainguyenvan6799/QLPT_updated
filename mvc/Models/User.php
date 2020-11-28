@@ -1,6 +1,9 @@
 <?php 
 	class User extends DB
 	{
+		public function __construct(){
+			echo 'xin chao user model';
+		}
 		public function showUser($user_id)
 		{
 			$user = $this->userCollection->findOne(['user_id' => $user_id]);
