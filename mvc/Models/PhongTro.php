@@ -1,6 +1,9 @@
 <?php 
 	class PhongTro extends DB
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemPhong($tenPhong,$tieuDe, $quan, $diaChi, $moTa, $gia, $img,$temp)
 		{
 			// $this->phongtroCollection = (new MongoDB\Client)->phongtrodb->phongtro;

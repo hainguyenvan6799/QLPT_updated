@@ -1,6 +1,9 @@
 <?php 
 	class User extends DB
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function test(){
 			echo 'xin chao function test usermodel';
 		}
@@ -138,7 +141,7 @@
 
 		public function getUserAreNotFriends($userlogin_id){
 			$abc = [];
-		    $arr = $this->userCollection->aggregate([ 
+		    $arr = parent::$userCollection->aggregate([ 
 		    	['$unwind' => '$relationship'],
 		    	['$match' => [
 		    		'user_id' => $userlogin_id,
@@ -151,7 +154,7 @@
 		    	// echo $b->friend_id . '<br>';
 		    	array_push($abc, $b->friend_id);
 		    }
-			$userAreNotFriends = $this->userCollection->find(
+			$userAreNotFriends = parent::$userCollection->find(
 				[
 			        '$and' => 
 			        [

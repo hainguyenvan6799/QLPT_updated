@@ -1,10 +1,10 @@
 <?php 
 	class BaseController
 	{
-		// public static $Model;
+		public static $Model;
 		// public static $Model1;
-		// public static $userModel;
-		public static $test;
+		public static $userModel;
+		
 		// public static $messageModel;
 		// public static $Model_phieuthu;
 		// public static $Model_phongtro;
@@ -13,7 +13,8 @@
 		// public static $Model_phieuthue;
 		// public static $Model_phieutra;
 		public function __construct(){
-			$this->test = "bac";
+			self::$Model = $this->model('PhongTro');
+			self::$userModel = $this->model('User');
 			// self::$userModel = $this->model("User");
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");

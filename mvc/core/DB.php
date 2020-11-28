@@ -10,7 +10,7 @@
 
 		public $connection;
 		protected $db;
-		public $userCollection;
+		public static $userCollection;
 		public $messageCollection;
 		public $khachthueCollection;
 		public $phieuthutienCollection;
@@ -30,7 +30,7 @@
 			);
 			$this->db = $this->connection->phongtrodb;
 			
-			$this->userCollection = $this->db->users;
+			self::$userCollection = $this->db->users;
 			$this->messageCollection = $this->db->message;
 			$this->khachthueCollection = $this->db->khachthue;
 			$this->phieuthutienCollection = $this->db->phieuthutien;
