@@ -1,5 +1,5 @@
 <?php 
-	require_once "mvc/core/vendor/autoload.php";
+	// require_once "mvc/core/vendor/autoload.php";
 	class ChatRealtimeController extends BaseController
 	{
 		// public $userModel;

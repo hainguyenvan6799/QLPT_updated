@@ -17,11 +17,11 @@
 			$this->Model1 = $this->model("ThietBi");
 			$this->messageModel = $this->model("Message");
 			$this->Model_phieuthu = $this->model("phieuthu");
-			$this->Model_phongtro = $this->model("phongtro");
-			$this->Model_thietbi = $this->model("thietbi");
-			$this->Model_khachthue = $this->model("khachthue");
-			$this->Model_phieuthue = $this->model("phieuthue");
-			$this->Model_phieutra = $this->model("phieutra");
+			$this->Model_phongtro = $this->model("PhongTro");
+			$this->Model_thietbi = $this->model("ThietBi");
+			$this->Model_khachthue = $this->model("KhachThue");
+			$this->Model_phieuthue = $this->model("PhieuThue");
+			$this->Model_phieutra = $this->model("PhieuTra");
 		}
 		public function model($model)
 		{

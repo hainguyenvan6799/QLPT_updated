@@ -1,12 +1,6 @@
 <?php 
 	class QuanLyPhongTroController extends BaseController
 	{
-		// public $Model;
-		// public $Model1;
-		public function __construct(){
-			// $this->Model = $this->model("phongtro");
-			// $this->Model1 = $this->model("thietbi");
-		}
 		public function ThemPhongTro(){
 			$this->view("Admin/Master",["page"=>"QuanLyPhongTro/ThemPhongTro"]);
 		}

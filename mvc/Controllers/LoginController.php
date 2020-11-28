@@ -17,7 +17,7 @@
 			if(isset($_SESSION["user_id"]) or isset($_SESSION["admin"]))
 			{
 				session_destroy();
-				echo '<script>window.location.href="../Login/getFormLogin";</script>';
+				echo '<script>window.location.href="Login/getFormLogin";</script>';
 			}
 		}
 		public function loginQrCode(){

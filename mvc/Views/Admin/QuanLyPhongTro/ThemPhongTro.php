@@ -12,7 +12,7 @@
     </section>
     <!-- Main content -->
     <section class="content">
-      <form method="post" action="../QuanLyPhongTro/getThemPhongTro" enctype="multipart/form-data">
+      <form method="post" action="QuanLyPhongTro/getThemPhongTro" enctype="multipart/form-data">
       <div class="row">
        <div class="col-md-1"></div>
         <div class="col-md-10">

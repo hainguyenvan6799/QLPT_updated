@@ -73,12 +73,12 @@
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" 
-                          href="../QuanLyPhongTro/XemChiTiet/<?php echo $b->maphong; ?>">
+                          href="QuanLyPhongTro/XemChiTiet/<?php echo $b->maphong; ?>">
                               <i class="fas fa-folder">
                               </i>
                               Xem
                           </a>
-                          <a class="btn btn-danger btn-sm" href="../QuanLyPhongTro/XoaPhong/<?php echo $b->maphong; ?>">
+                          <a class="btn btn-danger btn-sm" href="QuanLyPhongTro/XoaPhong/<?php echo $b->maphong; ?>">
                               <i class="fas fa-trash">
                               </i>
                               Xóa

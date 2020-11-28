@@ -9,11 +9,11 @@
     // }
 if(isset($_SESSION["user_id"]))
     {
-        echo '<script>window.location.href="../";</script>';
+        echo '<script>window.location.href="";</script>';
     }
     elseif(isset($_SESSION["admin"]))
     {
-        echo '<script>window.location.href="../Admin/Home";</script>';
+        echo '<script>window.location.href="Admin/Home";</script>';
     }
     else
     {
@@ -24,7 +24,6 @@ if(isset($_SESSION["user_id"]))
 <html>
 <head>
     <title></title>
-    <?php require_once "mvc/Views/base.php"; ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <script type="text/javascript" src="public/js/jquery.min.js"></script>
     <script type="text/javascript" src="public/js/instascan.min.js"></script>
@@ -313,11 +312,14 @@ form:after {
             method: "post",
             data: {content: content},
             success: function(data){
+                data = data[data.length - 1]; 
                 if(data == 1)
                 {
+                    // alert("Yes");
                     window.location.href = "";    
                 }
                 else if(data == 0){
+                    // alert("No");
                     window.location.href="Login/getFormLogin";
                     alert("QRCode không đúng hoặc đã hết hạn.");
                 }

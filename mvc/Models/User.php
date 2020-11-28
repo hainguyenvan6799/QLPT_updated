@@ -58,11 +58,11 @@
 					if($_SESSION["phanquyen"]==0) //admin
 					{
 						$_SESSION["admin"] = $result->user_id;
-						echo '<script>window.location.href="../Admin/Home";</script>';
+						echo '<script>window.location.href="Admin/Home";</script>';
 					}
 					else
 					{
-						echo '<script>window.location.href="../";</script>';
+						echo '<script>window.location.href="";</script>';
 					}
 					$_SESSION["user_id"] = $result->user_id;
 					$_SESSION["name"] = $result->name;

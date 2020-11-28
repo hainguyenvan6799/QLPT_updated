@@ -82,7 +82,7 @@
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" 
-                          href="../QuanLyKhachThue/XemChiTiet/<?php echo $r->cmt; ?>">
+                          href="QuanLyKhachThue/XemChiTiet/<?php echo $r->cmt; ?>">
                               <i class="fas fa-folder">
                               </i>
                               Xem chi tiết

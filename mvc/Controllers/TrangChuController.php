@@ -1,17 +1,6 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
-		// public $Model;
-		// public $Model1;
-		// public $userModel;
-		// public $messageModel;
-		// public function __construct(){
-		// 	$this->userModel = $this->model("User");
-		// 	$this->Model = $this->model("phongtro");
-		// 	$this->Model1 = $this->model("thietbi");
-		// 	$this->messageModel = $this->model("Message");
-		// }
-
 		public function Home(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
 			$getFriends = $this->userModel->getFriendsOfUser($user_login);

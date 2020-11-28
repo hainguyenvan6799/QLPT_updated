@@ -5,12 +5,12 @@
 		// public $Model_phongtro;
 		// public $Model_thietbi;
 		// public $Model_khachthue;
-		public function __construct(){
-			// $this->Model_phieuthu = $this->model("phieuthu");
-			// $this->Model_phongtro = $this->model("phongtro");
-			// $this->Model_thietbi = $this->model("thietbi");
-			// $this->Model_khachthue = $this->model("khachthue");
-		}
+		// public function __construct(){
+		// 	// $this->Model_phieuthu = $this->model("phieuthu");
+		// 	// $this->Model_phongtro = $this->model("phongtro");
+		// 	// $this->Model_thietbi = $this->model("thietbi");
+		// 	// $this->Model_khachthue = $this->model("khachthue");
+		// }
 
 		public function Home(){
 			$this->view("Admin/Master",[

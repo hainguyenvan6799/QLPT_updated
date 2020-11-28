@@ -13,7 +13,7 @@
     </section>
     <!-- Main content -->
     <section class="content">
-    	<form method="post" action="../QuanLyThuePhong/getThemPhieuThue">
+    	<form method="post" action="QuanLyThuePhong/getThemPhieuThue">
       <div class="row">
         <div class="col-md-6">
           <div class="card card-primary">

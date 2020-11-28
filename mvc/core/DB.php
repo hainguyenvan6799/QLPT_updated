@@ -27,6 +27,7 @@
 
 			$this->connection = new MongoDB\Client;
 			$this->db = $this->connection->phongtrodb;
+			
 			$this->userCollection = $this->db->users;
 			$this->messageCollection = $this->db->message;
 			$this->khachthueCollection = $this->db->khachthue;

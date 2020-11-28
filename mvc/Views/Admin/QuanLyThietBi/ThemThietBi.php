@@ -14,7 +14,7 @@
 
     <!-- Main content -->
     <section class="content">
-      <form method="post" action="../QuanLyThietBi/getThemThietBi">
+      <form method="post" action="QuanLyThietBi/getThemThietBi">
       <div class="row">
        <div class="col-md-1"></div>
         <div class="col-md-10">

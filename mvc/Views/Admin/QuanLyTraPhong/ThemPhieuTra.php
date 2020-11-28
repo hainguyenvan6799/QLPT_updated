@@ -5,7 +5,7 @@ function fetch_select(val)
 {
  $.ajax({
  type: 'post',
- url: '../QuanLyTraPhong/ajax',
+ url: 'QuanLyTraPhong/ajax',
  data: {
   get_option:val
  },
@@ -30,7 +30,7 @@ function fetch_select(val)
     </section>
     <!-- Main content -->
     <section class="content">
-    	<form method="post" action="../QuanLyTraPhong/getThemPhieuTra">
+    	<form method="post" action="QuanLyTraPhong/getThemPhieuTra">
       <div class="row">
         <div class="col-md-6">
           <div class="card card-primary">

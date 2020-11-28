@@ -1,10 +1,6 @@
 <?php 
 	class RegisterController extends BaseController
 	{
-		// public $userModel;
-		// public function __construct(){
-		// 	$this->userModel = $this->model("User");
-		// }
 		public function getFormRegister(){
 			$this->view("Register/registerForm");
 		}

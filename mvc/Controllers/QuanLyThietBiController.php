@@ -1,12 +1,6 @@
 <?php 
 	class QuanLyThietBiController extends BaseController
 	{
-		// public $Model;
-		// public $Model_pt;
-		public function __construct(){
-			// $this->Model = $this->model("thietbi");
-			// $this->Model_pt = $this->model("phongtro");
-		}
 		public function ThemThietBi(){
 			$this->view("Admin/Master",[
 				"page"=>"QuanLyThietBi/ThemThietBi",

@@ -27,7 +27,7 @@
           <div class="row">
             <div class="col-12 col-sm-6">
               <div class="col-12">
-                <img src="../../public/img/<?php echo $b->anh; ?>" class="product-image" alt="Product Image">
+                <img src="public/img/<?php echo $b->anh; ?>" class="product-image" alt="Product Image">
               </div>
             </div>
             <div class="col-12 col-sm-6">

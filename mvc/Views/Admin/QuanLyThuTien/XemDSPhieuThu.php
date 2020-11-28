@@ -66,7 +66,7 @@
                       </td>
                       <td class="project-actions text-right">
                           <a class="btn btn-primary btn-sm" 
-                          href="../QuanLyThuTien/XemChiTiet/<?php echo $r->maphieuthu; ?>">
+                          href="QuanLyThuTien/XemChiTiet/<?php echo $r->maphieuthu; ?>">
                               <i class="fas fa-folder">
                               </i>
                               Xem chi tiết

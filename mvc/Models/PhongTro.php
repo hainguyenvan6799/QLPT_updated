@@ -28,7 +28,7 @@
 			<body>
 				<script type="text/javascript">
 					alert("Thêm phòng thành công.");
-					window.location="../QuanLyPhongTro/ThemPhongTro";
+					window.location="QuanLyPhongTro/ThemPhongTro";
 				</script>
 			</body>
 			</html>

@@ -89,7 +89,7 @@
                             ?>
                       </td>
                       <td class="project-actions text-center ">
-                          <a class="btn btn-danger btn-sm" href="../QuanLyThietBi/XoaThietBi/<?php echo $b->mathietbi; ?>">
+                          <a class="btn btn-danger btn-sm" href="QuanLyThietBi/XoaThietBi/<?php echo $b->mathietbi; ?>">
                               <i class="fas fa-trash">
                               </i>
                               Xóa

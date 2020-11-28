@@ -1,7 +1,7 @@
 <?php
 if(!isset($_SESSION["admin"]))
 {
-  echo '<script>window.location.href="../../Login/getFormLogin"</script>';
+  echo '<script>window.location.href="Login/getFormLogin"</script>';
 }
 ?>
 <!DOCTYPE html>
@@ -13,11 +13,11 @@ if(!isset($_SESSION["admin"]))
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="../../public/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style -->
-  <link rel="stylesheet" href="../../public/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="public/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="../../public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -30,13 +30,13 @@ if(!isset($_SESSION["admin"]))
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
-        <a href="../../Admin/Home" class="nav-link">Trang chủ</a>
+        <a href="Admin/Home" class="nav-link">Trang chủ</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
-        <a href="../../Login/logout" class="nav-link">Đăng xuất</a>
+        <a href="Login/logout" class="nav-link">Đăng xuất</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
-        <a href="../../ChatRealtime/getChatView" class="nav-link">Message</a>
+        <a href="ChatRealtime/getChatView" class="nav-link">Message</a>
       </li>
 
     </ul>
@@ -53,7 +53,7 @@ if(!isset($_SESSION["admin"]))
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="../../public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Nhà Trọ</span>
     </a>
@@ -63,7 +63,7 @@ if(!isset($_SESSION["admin"]))
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="../../public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Herry</a>
@@ -86,12 +86,12 @@ if(!isset($_SESSION["admin"]))
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../QuanLyPhongTro/ThemPhongTro" class="nav-link">
+                <a href="QuanLyPhongTro/ThemPhongTro" class="nav-link">
                   <p>Thêm phòng trọ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../QuanLyPhongTro/XemDSPhong" class="nav-link">
+                <a href="QuanLyPhongTro/XemDSPhong" class="nav-link">
                   <p>Xem danh sách phòng trọ</p>
                 </a>
               </li>
@@ -113,12 +113,12 @@ if(!isset($_SESSION["admin"]))
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../QuanLyThietBi/ThemThietBi" class="nav-link">
+                <a href="QuanLyThietBi/ThemThietBi" class="nav-link">
                   <p>Thêm thiết bị</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../QuanLyThietBi/XemDSThietBi" class="nav-link">
+                <a href="QuanLyThietBi/XemDSThietBi" class="nav-link">
                   <p>Xem danh sách thiết bị</p>
                 </a>
               </li>
@@ -139,7 +139,7 @@ if(!isset($_SESSION["admin"]))
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../QuanLyKhachThue/XemDSKhachThue" class="nav-link">
+                <a href="QuanLyKhachThue/XemDSKhachThue" class="nav-link">
                   <p>Xem danh sách khách thuê</p>
                 </a>
               </li>
@@ -161,7 +161,7 @@ if(!isset($_SESSION["admin"]))
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../QuanLyThuePhong/ThemPhieuThue" class="nav-link">
+                <a href="QuanLyThuePhong/ThemPhieuThue" class="nav-link">
                   <p>Thêm phiếu thuê phòng</p>
                 </a>
               </li> 
@@ -182,7 +182,7 @@ if(!isset($_SESSION["admin"]))
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../QuanLyTraPhong/ThemPhieuTraPhong" class="nav-link">
+                <a href="QuanLyTraPhong/ThemPhieuTraPhong" class="nav-link">
                   <p>Thêm phiếu trả phòng</p>
                 </a>
               </li>
@@ -203,12 +203,12 @@ if(!isset($_SESSION["admin"]))
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="../../QuanLyThuTien/ThemPhieuThu" class="nav-link">
+                <a href="QuanLyThuTien/ThemPhieuThu" class="nav-link">
                   <p>Thêm phiếu thu</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="../../QuanLyThuTien/XemDSPhieuThu" class="nav-link">
+                <a href="QuanLyThuTien/XemDSPhieuThu" class="nav-link">
                   <p>Xem danh sách phiếu thu</p>
                 </a>
               </li>
@@ -244,7 +244,7 @@ if(!isset($_SESSION["admin"]))
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="../../public/plugins/jquery/jquery.min.js"></script>
+<script src="public/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -253,9 +253,9 @@ if(!isset($_SESSION["admin"]))
 </script>
 
 <!-- overlayScrollbars -->
-<script src="../../public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="../../public/dist/js/adminlte.js"></script>
+<script src="public/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 
 </body>
