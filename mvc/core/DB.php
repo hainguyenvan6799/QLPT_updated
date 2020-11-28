@@ -20,7 +20,7 @@
 		public $thietbiCollection;
 		public $lastIdCollection;
 
-		public static function __construct()
+		public function __construct()
 		{
 			$this->query = new MongoDB\Driver\Query($this->filter, $this->options);
 			$this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
