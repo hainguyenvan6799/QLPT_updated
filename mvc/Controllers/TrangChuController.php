@@ -1,9 +1,6 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
-		// public function __construct(){
-		// 	// parent::__construct();
-		// }
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
 			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
@@ -19,14 +16,12 @@
 			// print_r($getFriends);
 			// print_r($getNoFriends);
 			
-			echo "nguyen van hai";
+			
 			// // $this->a->test();
 			// echo parent::$test;
 
 			// parent::$userModel->test();
-
-			
-
+			echo "nguyen van hai";
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
