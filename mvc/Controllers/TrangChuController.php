@@ -2,7 +2,7 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
-			
+			print_r($this->userModel::test());
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
@@ -20,7 +20,6 @@
 			// print_r($getNoFriends);
 			
 			// echo "nguyen van hai";
-			print_r($this->userModel::test());
 
 		}
 		public function XemChiTiet($maphong){
