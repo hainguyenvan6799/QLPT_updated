@@ -1,7 +1,6 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
-		public $userModel;
 		public function __construct(){
 			
 		}
