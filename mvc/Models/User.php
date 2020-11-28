@@ -4,9 +4,9 @@
 		public function __construct(){
 			// echo 'xin chao user model';
 		}
-		// public function test(){
-		// 	echo 'xin chao function test usermodel';
-		// }
+		public function test(){
+			echo 'xin chao function test usermodel';
+		}
 		public function showUser($user_id)
 		{
 			$user = $this->userCollection->findOne(['user_id' => $user_id]);
