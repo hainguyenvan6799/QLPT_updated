@@ -1,9 +1,11 @@
 <?php 
 	class TrangChuController extends BaseController
 	{	
-		public static $a;
+		// public static $a;
 		public function __construct(){
-			$this->a = $this->model("User");
+			// $this->a = $this->model("User");
+			parent::__construct();
+
 		}
 		public static function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
@@ -21,8 +23,8 @@
 			// print_r($getNoFriends);
 			
 			echo "nguyen van hai";
-			$this->a->test();
-			echo $test;
+			// $this->a->test();
+			echo $this->test;
 
 		}
 		public function XemChiTiet($maphong){
