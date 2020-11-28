@@ -29,10 +29,10 @@
 			// $this->connection = new MongoDB\Client(
 			// 	'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
 			// );
-			$clients = new MongoDB\Client(
-				'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
-			);
-			print_r($clients);
+			$client = new MongoDB\Client(
+			    'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority');
+
+			print_r($client->phongtrodb->users);
 			// $this->db = $this->connection->phongtrodb;
 			
 			// self::$userCollection = $this->db->users;
