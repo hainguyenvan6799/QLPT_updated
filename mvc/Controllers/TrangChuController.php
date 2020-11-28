@@ -15,7 +15,10 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			parent::$userModel->test();
-			print_r($getFriends);
+			foreach($getFriends as $f)
+			{
+				echo $f->name . '<br>';
+			}
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
