@@ -11,7 +11,7 @@
 		public $Model_khachthue;
 		public $Model_phieuthue;
 		public $Model_phieutra;
-		public function __construct(){
+		public static function __construct(){
 			$this->userModel = $this->model("User");
 			$this->Model = $this->model("PhongTro");
 			$this->Model1 = $this->model("ThietBi");
@@ -23,12 +23,12 @@
 			$this->Model_phieuthue = $this->model("PhieuThue");
 			$this->Model_phieutra = $this->model("PhieuTra");
 		}
-		public function model($model)
+		public static function model($model)
 		{
 			require_once "mvc/Models/".$model.".php";
 			return new $model;
 		}
-		public static function view($view, $data = [])
+		public static static function view($view, $data = [])
 		{
 			require_once "mvc/Views/".$view.".php";
 		}
