@@ -25,7 +25,7 @@
 			
 			echo "nguyen van hai";
 			// // $this->a->test();
-			echo parent::$test;
+			// echo parent::$test;
 
 			// parent::$userModel->test();
 			
