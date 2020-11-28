@@ -1,9 +1,9 @@
 <?php 
 	class TrangChuController extends BaseController
 	{	
-		public static $userModel;
+		public static $a;
 		public function __construct(){
-			$this->userModel = $this->model("User");
+			$this->a = $this->model("User");
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
@@ -21,7 +21,7 @@
 			// print_r($getNoFriends);
 			
 			echo "nguyen van hai";
-			$this->userModel->test();
+			$this->a->test();
 			
 
 		}
