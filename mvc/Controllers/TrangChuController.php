@@ -1,12 +1,8 @@
 <?php 
 	class TrangChuController extends BaseController
-	{	
-		// public static $a;
+	{
 		public function __construct(){
-			// $this->a = $this->model("User");
-			parent::__construct();
-			
-
+			// parent::__construct();
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
@@ -28,7 +24,7 @@
 			// echo parent::$test;
 
 			// parent::$userModel->test();
-			
+
 			
 
 		}
