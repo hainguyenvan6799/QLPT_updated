@@ -126,7 +126,7 @@
 		    $arr = parent::$userCollection->aggregate([ 
 		    	['$unwind' => '$relationship'],
 		    	['$match' => [
-		    		'user_id' => $user_login,
+		    		'user_id' => (int)$user_login,
 		    		'relationship.status' => "f"
 		    	] ]
 		    	 ]);
