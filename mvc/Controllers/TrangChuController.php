@@ -15,10 +15,10 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 
-			print_r($this->userModel);
 			// print_r($user_login);
 			// print_r($getFriends);
 			// print_r($getNoFriends);
+			echo "nguyen van hai";
 
 		}
 		public function XemChiTiet($maphong){
