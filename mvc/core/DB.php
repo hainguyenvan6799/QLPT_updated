@@ -39,6 +39,7 @@
 			// $this->phongtroCollection = $this->db->phongtro;
 			// $this->thietbiCollection = $this->db->thietbi;
 			// $this->lastIdCollection = $this->db->last_id_collection;
+			echo 'db';
 		}
 
 	}

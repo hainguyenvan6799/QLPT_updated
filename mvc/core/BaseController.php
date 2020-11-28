@@ -14,7 +14,7 @@
 		public static $Model_phieutra;
 		public static function __construct(){
 			// self::$test = "testVar";
-			self::$userModel = self::model("User");
+			self::$userModel = $this->model("User");
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");
 			// self::$messageModel = self::model("Message");
@@ -25,12 +25,12 @@
 			// self::$Model_phieuthue = self::model("PhieuThue");
 			// self::$Model_phieutra = self::model("PhieuTra");
 		}
-		public static function model($model)
+		public function model($model)
 		{
 			require_once "mvc/Models/".$model.".php";
 			return new $model;
 		}
-		public static function view($view, $data = [])
+		public function view($view, $data = [])
 		{
 			require_once "mvc/Views/".$view.".php";
 		}

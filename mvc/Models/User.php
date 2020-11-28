@@ -1,7 +1,6 @@
 <?php 
 	class User extends DB
 	{
-		public static $userModel;
 		public function __construct(){
 			// echo 'xin chao user model';
 			parent::__construct();
