@@ -25,7 +25,9 @@
 			$this->query = new MongoDB\Driver\Query($this->filter, $this->options);
 			$this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
 
-			$this->connection = new MongoDB\Client;
+			$this->connection = new MongoDB\Client(
+				'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
+			);
 			$this->db = $this->connection->phongtrodb;
 			
 			$this->userCollection = $this->db->users;
