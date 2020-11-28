@@ -2,7 +2,8 @@
 	class User extends DB
 	{
 		public function __construct(){
-			parent::__construct();
+			// parent::__construct();
+			echo 'Xin chao db parent';
 		}
 		public function test(){
 			echo 'xin chao function test usermodel';

@@ -14,6 +14,7 @@
 			// 	"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
+			parent::$userModel->test();
 			echo 'Hello xin chòa';
 		}
 		public function XemChiTiet($maphong){
