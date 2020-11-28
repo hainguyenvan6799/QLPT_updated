@@ -6,8 +6,8 @@
 		}
 		public function Home(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
-			// $getFriends = $this->userModel->getFriendsOfUser($user_login);
-			// $getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
+			$getFriends = $this->userModel->getFriendsOfUser($user_login);
+			$getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
 			// 	'getFriends' => $getFriends,
 			// 	"page"=>"TrangChu/DSPT-TrangChu",
@@ -15,8 +15,8 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			print_r($user_login);
-			// print_r($getNoFriends);
-			// print_r($getNoFriends);
+			print_r($getNoFriends);
+			print_r($getNoFriends);
 
 		}
 		public function XemChiTiet($maphong){
