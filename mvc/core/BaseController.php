@@ -3,7 +3,7 @@
 	{
 		public $Model;
 		public $Model1;
-		public $userModel;
+		public static $userModel;
 		public $messageModel;
 		public $Model_phieuthu;
 		public $Model_phongtro;
@@ -23,12 +23,12 @@
 			$this->Model_phieuthue = $this->model("PhieuThue");
 			$this->Model_phieutra = $this->model("PhieuTra");
 		}
-		public function model($model)
+		public static function model($model)
 		{
 			require_once "./mvc/Models/".$model.".php";
 			return new $model;
 		}
-		public function view($view, $data = [])
+		public static function view($view, $data = [])
 		{
 			require_once "./mvc/Views/".$view.".php";
 		}
