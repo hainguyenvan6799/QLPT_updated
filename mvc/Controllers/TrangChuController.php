@@ -2,7 +2,7 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
-			parent->__construct();
+			parent::__construct();
 			echo 'Construct basecontroller';
 		}
 		public function Home(){
@@ -22,10 +22,11 @@
 			
 			
 			// // $this->a->test();
-			// echo parent::$test;
+			
 
 			// parent::$userModel->test();
 			echo "nguyen van hai";
+			echo parent::$test;
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
