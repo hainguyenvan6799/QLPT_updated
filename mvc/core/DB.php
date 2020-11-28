@@ -26,9 +26,13 @@
 			// $this->query = new MongoDB\Driver\Query($this->filter, $this->options);
 			// $this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
 
-			$this->connection = new MongoDB\Client(
+			// $this->connection = new MongoDB\Client(
+			// 	'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
+			// );
+			$clients = new MongoDB\Client(
 				'mongodb+srv://hainguyenvan6799:Thu123456789@phongtro.ezstc.mongodb.net/phongtrodb?retryWrites=true&w=majority'
 			);
+			print_r($clients);
 			// $this->db = $this->connection->phongtrodb;
 			
 			// self::$userCollection = $this->db->users;
