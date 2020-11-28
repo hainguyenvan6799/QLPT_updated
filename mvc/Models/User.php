@@ -4,7 +4,7 @@
 		public static $userModel;
 		public function __construct(){
 			// echo 'xin chao user model';
-			
+			parent::__construct();
 		}
 		public function test(){
 			echo 'xin chao function test usermodel';
