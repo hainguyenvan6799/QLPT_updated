@@ -14,18 +14,18 @@
 		public static $Model_phieutra;
 		public static function __construct(){
 			// self::$test = "testVar";
-			self::$userModel = $this->model("User");
-			self::$Model = $this->model("PhongTro");
-			self::$Model1 = $this->model("ThietBi");
-			self::$messageModel = $this->model("Message");
-			self::$Model_phieuthu = $this->model("phieuthu");
-			self::$Model_phongtro = $this->model("PhongTro");
-			self::$Model_thietbi = $this->model("ThietBi");
-			self::$Model_khachthue = $this->model("KhachThue");
-			self::$Model_phieuthue = $this->model("PhieuThue");
-			self::$Model_phieutra = $this->model("PhieuTra");
+			self::$userModel = self::model("User");
+			self::$Model = self::model("PhongTro");
+			self::$Model1 = self::model("ThietBi");
+			self::$messageModel = self::model("Message");
+			self::$Model_phieuthu = self::model("phieuthu");
+			self::$Model_phongtro = self::model("PhongTro");
+			self::$Model_thietbi = self::model("ThietBi");
+			self::$Model_khachthue = self::model("KhachThue");
+			self::$Model_phieuthue = self::model("PhieuThue");
+			self::$Model_phieutra = self::model("PhieuTra");
 		}
-		public function model($model)
+		public static function model($model)
 		{
 			require_once "mvc/Models/".$model.".php";
 			return new $model;
