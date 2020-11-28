@@ -27,7 +27,8 @@
 			// // $this->a->test();
 			// echo parent::$test;
 
-			parent::$userModel->test();
+			// parent::$userModel->test();
+			
 			
 
 		}

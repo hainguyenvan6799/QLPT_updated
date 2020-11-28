@@ -15,6 +15,7 @@
 		public static function __construct(){
 			// self::$test = "testVar";
 			self::$userModel = $this->model("User");
+			dd(self::$userModel);
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");
 			// self::$messageModel = self::model("Message");
