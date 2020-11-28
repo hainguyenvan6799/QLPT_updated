@@ -19,6 +19,7 @@
 			// print_r($user_login);
 			// print_r($getFriends);
 			// print_r($getNoFriends);
+			$a->test();
 			echo "nguyen van hai";
 
 		}

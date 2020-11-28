@@ -2,7 +2,10 @@
 	class User extends DB
 	{
 		public function __construct(){
-			echo 'xin chao user model';
+			// echo 'xin chao user model';
+		}
+		public function test(){
+			echo 'xin chao function test usermodel';
 		}
 		public function showUser($user_id)
 		{
