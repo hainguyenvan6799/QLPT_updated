@@ -5,8 +5,8 @@
 			parent::__construct();
 		}
 		public function Home(){
-			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
-			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
+			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : "hello";
+			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
 			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
 			// 	'getFriends' => $getFriends,
@@ -15,7 +15,6 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			parent::$userModel->test();
-			echo 'Hello xin chòa';
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[

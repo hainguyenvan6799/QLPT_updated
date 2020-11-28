@@ -137,7 +137,7 @@
 		 //    	array_push($abc, $b->friend_id);
 		 //    }
 		 //    return $abc;
-			return "abc";
+			return "getFriendsOfUser";
 		}
 
 		public function getUserAreNotFriends($userlogin_id){
