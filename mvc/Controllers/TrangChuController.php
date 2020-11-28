@@ -22,7 +22,7 @@
 			
 			echo "nguyen van hai";
 			$this->a->test();
-			echo $this->test;
+			echo $test;
 
 		}
 		public function XemChiTiet($maphong){
