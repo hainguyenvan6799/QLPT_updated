@@ -12,12 +12,12 @@
 			//Xử lý controller
 			if(isset($arr))
 			{
-				if(file_exists("./mvc/Controllers/".$arr[0]."Controller.php"))
+				if(file_exists("mvc/Controllers/".$arr[0]."Controller.php"))
 				{
 					$this->controller = $arr[0];
 					unset($arr[0]); // xóa đi phần tử thứ 0 của mảng $arr
 				}
-				require_once "./mvc/Controllers/".$this->controller."Controller.php";
+				require_once "mvc/Controllers/".$this->controller."Controller.php";
 				$homeobj = $this->controller . "Controller"; // Tên Controller
 				$this->controller = new $homeobj;
 				//Xử lý action
@@ -45,7 +45,7 @@
 			}
 			else
 			{
-				require_once "./mvc/Controllers/".$this->controller."Controller.php";
+				require_once "mvc/Controllers/".$this->controller."Controller.php";
 				$homeobj = $this->controller . "Controller"; // Tên Controller
 				$this->controller = new $homeobj;
 				call_user_func_array([$this->controller, $this->action], $this->param);
