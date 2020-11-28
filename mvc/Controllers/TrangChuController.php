@@ -1,10 +1,7 @@
 <?php 
 	class TrangChuController extends BaseController
 	{	
-		public static $a;
 		public function __construct(){
-			$this->a = $this->model("User");
-			$this->a->test();
 			
 		}
 		public function Home(){
@@ -23,7 +20,7 @@
 			// print_r($getNoFriends);
 			
 			echo "nguyen van hai";
-			$this->a->test();
+			$this->userModel->test();
 			
 
 		}

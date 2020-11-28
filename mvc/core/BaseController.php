@@ -3,7 +3,7 @@
 	{
 		public $Model;
 		public $Model1;
-		public $userModel;
+		public static $userModel;
 		public $messageModel;
 		public $Model_phieuthu;
 		public $Model_phongtro;
