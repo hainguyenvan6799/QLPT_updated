@@ -1,19 +1,19 @@
 <?php 
 	class BaseController
 	{
-		public static $Model;
-		public static $Model1;
-		public static $userModel;
-		public static $test;
-		public static $messageModel;
-		public static $Model_phieuthu;
-		public static $Model_phongtro;
-		public static $Model_thietbi;
-		public static $Model_khachthue;
-		public static $Model_phieuthue;
-		public static $Model_phieutra;
+		// public static $Model;
+		// public static $Model1;
+		// public static $userModel;
+		// public static $test;
+		// public static $messageModel;
+		// public static $Model_phieuthu;
+		// public static $Model_phongtro;
+		// public static $Model_thietbi;
+		// public static $Model_khachthue;
+		// public static $Model_phieuthue;
+		// public static $Model_phieutra;
 		public static function __construct(){
-			self::$test = "testVar";
+			// self::$test = "testVar";
 			// self::$userModel = $this->model("User");
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");
