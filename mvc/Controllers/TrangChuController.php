@@ -1,13 +1,12 @@
 <?php 
 	class TrangChuController extends BaseController
 	{
-		public $userModel;
 		public function __construct(){
-			$this->userModel = $this->model("User");
+			print_r($this->userModel);
 		}
 		public function Home(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
-			$getFriends = $this->userModel->getFriendsOfUser($user_login);
+			// $getFriends = $this->userModel->getFriendsOfUser($user_login);
 			// $getNoFriends = $this->userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
 			// 	'getFriends' => $getFriends,
@@ -16,7 +15,7 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			print_r($user_login);
-			print_r($getFriends);
+			// print_r($getFriends);
 			// print_r($getNoFriends);
 
 		}
