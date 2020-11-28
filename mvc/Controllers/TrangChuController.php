@@ -5,7 +5,7 @@
 			parent::__construct();
 		}
 		public function Home(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : "hello";
+			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 1;
 			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
 			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
@@ -15,7 +15,7 @@
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
 			parent::$userModel->test();
-			echo $getFriends;
+			print_r($getFriends);
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
