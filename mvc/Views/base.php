@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-	<base href="https://quanlyphongtrostar.herokuapp.com/">
-</head>
-<body>
-
-</body>
-</html>
+<?php 
+	echo '<base href="http://localhost:88/QuanLyPhongTro/">';
+ ?>
