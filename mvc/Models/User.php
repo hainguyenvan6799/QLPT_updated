@@ -1,8 +1,10 @@
 <?php 
 	class User extends DB
 	{
+		public static $userModel;
 		public function __construct(){
 			// echo 'xin chao user model';
+			
 		}
 		public function test(){
 			echo 'xin chao function test usermodel';

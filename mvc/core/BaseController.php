@@ -3,7 +3,7 @@
 	{
 		public $Model;
 		public $Model1;
-		public static $userModel;
+		public $userModel;
 		public $messageModel;
 		public $Model_phieuthu;
 		public $Model_phongtro;
@@ -11,7 +11,7 @@
 		public $Model_khachthue;
 		public $Model_phieuthue;
 		public $Model_phieutra;
-		public static function __construct(){
+		public function __construct(){
 			$this->userModel = $this->model("User");
 			$this->Model = $this->model("PhongTro");
 			$this->Model1 = $this->model("ThietBi");
