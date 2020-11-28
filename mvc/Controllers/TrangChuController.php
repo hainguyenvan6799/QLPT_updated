@@ -4,7 +4,6 @@
 		public $a;
 		public function __construct(){
 			$a = $this->model('User');
-			$a->test();
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
@@ -20,7 +19,7 @@
 			// print_r($user_login);
 			// print_r($getFriends);
 			// print_r($getNoFriends);
-			
+			$a->test();
 			echo "nguyen van hai";
 
 		}
