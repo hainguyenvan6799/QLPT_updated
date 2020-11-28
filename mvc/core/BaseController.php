@@ -12,7 +12,7 @@
 		public $Model_khachthue;
 		public $Model_phieuthue;
 		public $Model_phieutra;
-		public function __construct(){
+		public static function __construct(){
 			$this->test = "testVar";
 			$this->userModel = $this->model("User");
 			$this->Model = $this->model("PhongTro");
