@@ -12,8 +12,5 @@ $client = new MongoDB\Client(
 $db = $client->mongodb;
 	$userCollection = $db->test;
 	$users = $userCollection->find();
-	foreach($users as $u)
-	{
-		print_r($u);
-	}
+	print_r($users);
 ?>
