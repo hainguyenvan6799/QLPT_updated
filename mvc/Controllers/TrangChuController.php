@@ -2,6 +2,7 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
+			parent->__construct();
 			echo 'Construct basecontroller';
 		}
 		public function Home(){
