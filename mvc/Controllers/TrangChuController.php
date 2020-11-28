@@ -20,7 +20,7 @@
 			// print_r($getNoFriends);
 			
 			// echo "nguyen van hai";
-			print_r($this->userModel);
+			print_r($this->userModel->test());
 
 		}
 		public function XemChiTiet($maphong){
