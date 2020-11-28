@@ -23,7 +23,7 @@
 			// print_r($getFriends);
 			// print_r($getNoFriends);
 			
-			// echo "nguyen van hai";
+			echo "nguyen van hai";
 			// // $this->a->test();
 			echo parent::$test;
 
