@@ -11,5 +11,6 @@ $client = new MongoDB\Client(
 
 $db = $client->mongodb;
 	$test = $db->test;
-	print_r($test);
+	$abc = $test->find(['_id'=>'5fc27ec2a073217ac5dfb799']);
+	print_r($abc);
 ?>
