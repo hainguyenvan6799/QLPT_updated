@@ -12,9 +12,8 @@
 		// public static $Model_khachthue;
 		// public static $Model_phieuthue;
 		// public static $Model_phieutra;
-		public static function __construct(){
-			self::$test = "testVar";
-			echo self::$test;
+		public function __construct(){
+			$this->test = "bac";
 			// self::$userModel = $this->model("User");
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");
