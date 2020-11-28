@@ -137,8 +137,7 @@
 		 //    	array_push($abc, $b->friend_id);
 		 //    }
 		 //    return $abc;
-			$a = parent::$userCollection->find();
-			return $a;
+			
 			// return "getFriendsOfUser";
 		}
 

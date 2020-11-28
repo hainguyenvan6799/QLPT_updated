@@ -31,7 +31,11 @@
 
 			$this->db = $connection->phongtrodb;
 			self::$userCollection = $this->db->users;
-			
+			$users = self::$userCollection->find();
+			foreach($users as $u)
+			{
+				echo $u->name . '<br>';
+			}
 			// $this->db = $this->connection->phongtrodb;
 			
 			// self::$userCollection = $this->db->users;
