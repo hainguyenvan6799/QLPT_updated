@@ -13,8 +13,10 @@
 		// public static $Model_phieuthue;
 		// public static $Model_phieutra;
 		public function __construct(){
-			self::$Model = $this->model('PhongTro');
-			self::$userModel = $this->model('User');
+			// self::$Model = $this->model('PhongTro');
+			// self::$userModel = $this->model('User');
+
+			echo 'XinchaoContructBasecontroller';
 			// self::$userModel = $this->model("User");
 			// self::$Model = self::model("PhongTro");
 			// self::$Model1 = self::model("ThietBi");

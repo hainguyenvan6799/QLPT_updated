@@ -2,8 +2,7 @@
 	class TrangChuController extends BaseController
 	{
 		public function __construct(){
-			// parent::__construct();
-			echo 'hêlo';
+			parent::__construct();
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
