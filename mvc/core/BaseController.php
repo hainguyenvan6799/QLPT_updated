@@ -15,15 +15,15 @@
 		public static function __construct(){
 			// self::$test = "testVar";
 			self::$userModel = self::model("User");
-			self::$Model = self::model("PhongTro");
-			self::$Model1 = self::model("ThietBi");
-			self::$messageModel = self::model("Message");
-			self::$Model_phieuthu = self::model("phieuthu");
-			self::$Model_phongtro = self::model("PhongTro");
-			self::$Model_thietbi = self::model("ThietBi");
-			self::$Model_khachthue = self::model("KhachThue");
-			self::$Model_phieuthue = self::model("PhieuThue");
-			self::$Model_phieutra = self::model("PhieuTra");
+			// self::$Model = self::model("PhongTro");
+			// self::$Model1 = self::model("ThietBi");
+			// self::$messageModel = self::model("Message");
+			// self::$Model_phieuthu = self::model("phieuthu");
+			// self::$Model_phongtro = self::model("PhongTro");
+			// self::$Model_thietbi = self::model("ThietBi");
+			// self::$Model_khachthue = self::model("KhachThue");
+			// self::$Model_phieuthue = self::model("PhieuThue");
+			// self::$Model_phieutra = self::model("PhieuTra");
 		}
 		public static function model($model)
 		{
