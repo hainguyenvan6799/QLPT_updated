@@ -49,7 +49,8 @@
 				$homeobj = $this->controller . "Controller"; // Tên Controller
 				$this->controller = new $homeobj;
 				// call_user_func_array([$this->controller, $this->action], $this->param);
-				$this->controller->Home();
+				$abc = new $homeobj;
+				$abc->Home();
 			}
 		}
 	}
