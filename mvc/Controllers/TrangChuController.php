@@ -3,7 +3,6 @@
 	{
 		public function __construct(){
 			parent::__construct();
-			echo 'Construct basecontroller';
 		}
 		public function Home(){
 			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : 'hello';
@@ -25,7 +24,6 @@
 			
 
 			// parent::$userModel->test();
-			echo "nguyen van hai";
 			echo parent::$test;
 		}
 		public function XemChiTiet($maphong){
