@@ -26,9 +26,15 @@
 			// $this->query = new MongoDB\Driver\Query($this->filter, $this->options);
 			// $this->mongoConnection = new MongoDB\Driver\Manager($this->servername);
 
-			// $this->connection = new MongoDB\Client(
-			// 	'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority'
-			// );
+			$client = new MongoDB\Client(
+			    'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
+
+			$db = $client->phongtrodb;
+			$testde = $db->test->find();
+			foreach($testde as $t)
+			{
+				echo $t->ab;
+			}
 			
 			// $this->db = $this->connection->phongtrodb;
 			
