@@ -1,8 +1,9 @@
 <?php 
 	class TrangChuController extends BaseController
-	{
+	{	
+		public $a;
 		public function __construct(){
-			$this->userModel = $this->model("User");
+			$this->a = $this->model("User");
 			$this->Model = $this->model("PhongTro");
 			$this->Model1 = $this->model("ThietBi");
 			$this->messageModel = $this->model("Message");
@@ -29,7 +30,7 @@
 			// print_r($getNoFriends);
 			
 			// echo "nguyen van hai";
-			$this->userModel->test();
+			$this->a->test();
 
 		}
 		public function XemChiTiet($maphong){
