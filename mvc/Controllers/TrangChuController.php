@@ -18,8 +18,8 @@
 
 			// Test data
 			// parent::$userModel->test();
-			$getFriends = parent::$userModel->getFriendsOfUser(1);
-			var_dump($getFriends);
+			// $getFriends = parent::$userModel->getFriendsOfUser(1);
+			// var_dump($getFriends);
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
