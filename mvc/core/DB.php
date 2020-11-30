@@ -30,11 +30,12 @@
 			    'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
 
 			$db = $client->phongtrodb;
-			$testde = $db->users->find();
-			foreach($testde as $t)
-			{
-				echo $t->name;
-			}
+			self::$userCollection = $db->users;
+			// $testde = self::$userCollection->find();
+			// foreach($testde as $t)
+			// {
+			// 	echo $t->name . '<br>';
+			// }
 			
 			// $this->db = $this->connection->phongtrodb;
 			

@@ -139,6 +139,11 @@
 		 //    return $abc;
 			
 			// return "getFriendsOfUser";
+			$users = parent::$userCollection->find();
+			foreach($users as $u)
+			{
+				echo $u->name . '<br>';
+			}
 		}
 
 		public function getUserAreNotFriends($userlogin_id){
