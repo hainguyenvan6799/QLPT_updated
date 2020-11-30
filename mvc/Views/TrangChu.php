@@ -1,4 +1,4 @@
 <?php 
-error_reporting(E_ALL);
+error_reporting(0);
     echo "hello Trang Chu";
  ?>
