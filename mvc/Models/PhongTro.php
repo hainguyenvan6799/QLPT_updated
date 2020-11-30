@@ -52,7 +52,7 @@
 		public function XemDSPhong_Them_PhongTrong()
 		{
 			// $this->phongtroCollection = (new MongoDB\Client)->phongtrodb->phongtro;
-			$data=$this->phongtroCollection->find(['trangthai'=>'Còn trống'],['sort' => ['tenphong' => 1],]);
+			$data=parent::$phongtroCollection->find(['trangthai'=>'Còn trống'],['sort' => ['tenphong' => 1],]);
 			return $data;
 		}
 		public function XemDSPhong_Them_DaThue()
