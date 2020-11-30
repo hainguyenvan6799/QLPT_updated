@@ -5,8 +5,8 @@
 			parent::__construct();
 		}
 		public function Home(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
+			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
 			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
 			// $this->view("TrangChu",[
 			// 	'getFriends' => $getFriends,
@@ -18,7 +18,7 @@
 
 			// Test data
 			// parent::$userModel->test();
-			parent::$userModel->getFriendsOfUser(1);
+			$getFriends = parent::$userModel->getFriendsOfUser(1);
 
 			foreach($getFriends as $f)
 			{
