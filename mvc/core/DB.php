@@ -23,7 +23,7 @@
 		public function __construct()
 		{
 			$client = new MongoDB\Client();
-			    // 'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
+			    'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
 
 			$db = $client->phongtrodb;
 			self::$userCollection = $db->users;
