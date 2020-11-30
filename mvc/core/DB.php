@@ -22,10 +22,6 @@
 
 		public function __construct()
 		{
-			echo 'Xin chao contruct db';
-			// self::$query = new MongoDB\Driver\Query(self::$filter, self::$options);
-			// self::$mongoConnection = new MongoDB\Driver\Manager(self::$servername);
-
 			$client = new MongoDB\Client(
 			    'mongodb+srv://hainguyenvan6799:FpStNIkhVebgmica@cluster0.kyvzw.mongodb.net/phongtrodb?retryWrites=true&w=majority');
 
