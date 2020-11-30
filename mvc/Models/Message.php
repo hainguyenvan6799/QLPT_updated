@@ -2,7 +2,7 @@
 	class Message extends DB
 	{
 		public function __construct(){
-			parent::__contruct();
+			parent::__construct();
 		}
 		public function getMessageFromMeToUser($user_id)
 		{
