@@ -19,11 +19,7 @@
 			// Test data
 			// parent::$userModel->test();
 			$getFriends = parent::$userModel->getFriendsOfUser(1);
-
-			foreach($getFriends as $f)
-			{
-				echo $f->name . '<br>';
-			}
+			var_dump($getFriends);
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
