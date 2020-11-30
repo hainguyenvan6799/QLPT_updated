@@ -14,7 +14,8 @@
 			// 	"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
 			// 	'getNoFriends' => $getNoFriends
 			// ]);
-			$this->view("TrangChu", []);
+			// $this->view("TrangChu", []);
+			echo 'Hello xin chao';
 
 			// Test data
 			// parent::$userModel->test();
