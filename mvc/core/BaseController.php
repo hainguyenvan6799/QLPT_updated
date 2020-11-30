@@ -30,8 +30,7 @@
 		}
 		public function view($view, $data = [])
 		{
-			echo 'Xin chao '. $view;
-			// require_once "mvc/Views/".$view.".php";
+			require_once "mvc/Views/".$view.".php";
 		}
 	}
  ?>
