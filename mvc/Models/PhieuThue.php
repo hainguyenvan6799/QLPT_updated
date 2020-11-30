@@ -1,6 +1,9 @@
 <?php 
 	class PhieuThue extends DB
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemPhieuThue($maPhong, $cMT, $ngayThue, $tienCoc, $ghiChu)
 		{
 			// $this->phieuthuephongCollection = (new MongoDB\Client)->phongtrodb->phieuthuephong;

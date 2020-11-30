@@ -6,17 +6,18 @@
 		}
 		public function Home(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
-			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
-			// $this->view("TrangChu",[
-			// 	'getFriends' => $getFriends,
-			// 	"page"=>"TrangChu/DSPT-TrangChu",
-			// 	"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
-			// 	'getNoFriends' => $getNoFriends
-			// ]);
+			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
+			$getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
+			$this->view("TrangChu",[
+				'getFriends' => $getFriends,
+				"page"=>"TrangChu/DSPT-TrangChu",
+				"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
+				'getNoFriends' => $getNoFriends
+			]);
 
-			parent::$userModel->test();
-			parent::$userModel->getFriendsOfUser(1);
+			// Test data
+			// parent::$userModel->test();
+			// parent::$userModel->getFriendsOfUser(1);
 
 			// foreach($getFriends as $f)
 			// {
@@ -26,8 +27,8 @@
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[
 				"page"=>"TrangChu/XemChiTiet",  
-				"data"=>$this->Model->XemChiTietPhong($maphong),
-				"data1"=>$this->Model1->DSThietBi($maphong)
+				"data"=>parent::$Model->XemChiTietPhong($maphong),
+				"data1"=>parent::$Model1->DSThietBi($maphong)
 			]);
 				
 			
@@ -38,7 +39,7 @@
 			$gia =($_POST["gia"]);
 			$this->view("TrangChu",[
 				"page"=>"TrangChu/DSPT-TrangChu",
-				"data"=>$this->Model->TimKiem($quan,$gia)
+				"data"=>parent::$Model->TimKiem($quan,$gia)
 			]);
 			
 		}

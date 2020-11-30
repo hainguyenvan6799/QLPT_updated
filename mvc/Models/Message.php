@@ -1,7 +1,9 @@
 <?php 
 	class Message extends DB
 	{
-
+		public function __construct(){
+			parent::__contruct();
+		}
 		public function getMessageFromMeToUser($user_id)
 		{
 			$my_id = $_SESSION['user_id'];

@@ -1,6 +1,9 @@
 <?php 
 	class UserController extends BaseController
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function sendAddFreRequest(){
 			$to = $_POST["addFr_id"];
 			$from = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : null;

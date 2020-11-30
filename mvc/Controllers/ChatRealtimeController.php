@@ -12,6 +12,9 @@
 		// 	$this->Model = $this->model("PhongTro");
 		// 	$this->Model1 = $this->model("ThietBi");
 		// }
+		public function __construct(){
+			parent::__construct();
+		}
 		public function getChatView(){
 			$users = $this->userModel->getAllUserWithoutUserLogin();
 

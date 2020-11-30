@@ -3,7 +3,6 @@
 	{
 		public function __construct(){
 			parent::__construct();
-			echo 'Xin chào phongtroModel';
 		}
 		public function ThemPhong($tenPhong,$tieuDe, $quan, $diaChi, $moTa, $gia, $img,$temp)
 		{

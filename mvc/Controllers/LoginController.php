@@ -5,6 +5,9 @@
 		// public function __construct(){
 		// 	$this->userModel = $this->model("User");
 		// }
+		public function __construct(){
+			parent::__construct();
+		}
 		public function getFormLogin(){
 			$this->view("Login/loginForm");
 		}

@@ -1,6 +1,9 @@
 <?php 
 	class RegisterController extends BaseController
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function getFormRegister(){
 			$this->view("Register/registerForm");
 		}

@@ -1,6 +1,9 @@
 <?php 
 	class QuanLyPhongTroController extends BaseController
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemPhongTro(){
 			$this->view("Admin/Master",["page"=>"QuanLyPhongTro/ThemPhongTro"]);
 		}

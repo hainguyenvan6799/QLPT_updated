@@ -1,6 +1,9 @@
 <?php 
 	class ThietBi extends DB
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemThietBi($tenThietBi, $maPhong, $tinhTrang, $soLuong)
 		{
 			// $this->thietbiCollection = (new MongoDB\Client)->phongtrodb->thietbi;

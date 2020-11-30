@@ -1,6 +1,9 @@
 <?php 
 	class QuanLyThuePhongController extends BaseController
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemPhieuThue(){
 			//$this->Model->ajax();
 			$this->view("Admin/Master",[

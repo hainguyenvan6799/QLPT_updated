@@ -11,7 +11,9 @@
 		// 	// $this->Model_thietbi = $this->model("thietbi");
 		// 	// $this->Model_khachthue = $this->model("khachthue");
 		// }
-
+		public function __construct(){
+			parent::__construct();
+		}
 		public function Home(){
 			$this->view("Admin/Master",[
 				"page"=>"Home/Home",

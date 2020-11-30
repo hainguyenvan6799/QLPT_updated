@@ -1,6 +1,9 @@
 <?php 
 	class KhachThue extends DB
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemKhachThue($cMT, $hoTen, $gioiTinh, $ngheNghiep, $sDT, $diaChi,$maPhong)
 		{
 			$data=$this->khachthueCollection->find([],['limit' => 1,'sort' => ['makhachthue' => -1],]);

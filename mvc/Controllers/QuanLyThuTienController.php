@@ -1,6 +1,9 @@
 <?php 
 	class QuanLyThuTienController extends BaseController
 	{
+		public function __construct(){
+			parent::__construct();
+		}
 		public function ThemPhieuThu(){
 			$this->view("Admin/Master",[
 				"page"=>"QuanLyThuTien/ThemPhieuThu",
