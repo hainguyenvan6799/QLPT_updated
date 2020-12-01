@@ -5,16 +5,15 @@
 			parent::__construct();
 		}
 		public function Home(){
-			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
-			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
-			// $this->view("TrangChu",[
-			// 	'getFriends' => $getFriends,
-			// 	"page"=>"TrangChu/DSPT-TrangChu",
-			// 	"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
-			// 	'getNoFriends' => $getNoFriends
-			// ]);
-			$this->view("TrangChu", []);
+			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
+			$getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
+			$this->view("TrangChu",[
+				'getFriends' => $getFriends,
+				"page"=>"TrangChu/DSPT-TrangChu",
+				"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
+				'getNoFriends' => $getNoFriends
+			]);
 
 			// Test data
 			// parent::$userModel->test();

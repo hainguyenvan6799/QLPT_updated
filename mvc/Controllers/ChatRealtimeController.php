@@ -2,16 +2,6 @@
 	// require_once "mvc/core/vendor/autoload.php";
 	class ChatRealtimeController extends BaseController
 	{
-		// public $userModel;
-		// public $messageModel;
-		// public $Model;
-		// public $Model1;
-		// public function __construct(){
-		// 	$this->userModel = $this->model("User");
-		// 	$this->messageModel = $this->model("Message");
-		// 	$this->Model = $this->model("PhongTro");
-		// 	$this->Model1 = $this->model("ThietBi");
-		// }
 		public function __construct(){
 			parent::__construct();
 		}
@@ -110,18 +100,18 @@
 			]);
 		}
 
-		public function test3s(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			$userModel = parent::$userModel;
-			$messageModel = parent::$messageModel;
-			$userCollection = parent::$userModel->getUserCollection();
+		// public function test3s(){
+		// 	$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+		// 	$userModel = parent::$userModel;
+		// 	$messageModel = parent::$messageModel;
+		// 	$userCollection = parent::$userModel->getUserCollection();
 
-			return $this->view("ChatRealtime/test",[
-				'userModel' => $userModel,
-				'messageModel' => $messageModel,
-				'userCollection' => $userCollection
-			]);
-			// return $this->view("ChatRealtime/test", []);
-		}
+		// 	return $this->view("ChatRealtime/test",[
+		// 		'userModel' => $userModel,
+		// 		'messageModel' => $messageModel,
+		// 		'userCollection' => $userCollection
+		// 	]);
+		// 	// return $this->view("ChatRealtime/test", []);
+		// }
 	}
  ?>
