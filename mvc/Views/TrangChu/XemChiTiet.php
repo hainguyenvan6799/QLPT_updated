@@ -1,4 +1,4 @@
-    <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="client/css/style.css" type="text/css" media="all" />
 
  <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
@@ -27,7 +27,7 @@
           <div class="row">
             <div class="col-12 col-sm-6">
               <div class="col-md-6">
-                <img src="public/img/<?php echo $b->anh; ?>" class="product-image" style="width: 600px; height: auto;" alt="Product Image">
+                <img src="client/img/<?php echo $b->anh; ?>" class="product-image" style="width: 600px; height: auto;" alt="Product Image">
               </div>
             </div>
             <div class="col-md-6">
@@ -175,8 +175,8 @@
 
 
   <!-- open chatbox -->
-  <script src="public/js/chatrealtime/pusher7.js"></script>
-<script src="public/js/jquery351.js"></script>
+  <script src="client/js/chatrealtime/pusher7.js"></script>
+<script src="client/js/jquery351.js"></script>
 <script>
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -186,7 +186,7 @@
             window.scrollTo(0, 1);
         }
 </script>
-<!-- <script type="text/javascript" src="public/js/chatbox.js"></script> -->
+<!-- <script type="text/javascript" src="client/js/chatbox.js"></script> -->
 <script type="text/javascript">
   $(document).ready(function(){
     $('#aboutFriend').css("display", "none");

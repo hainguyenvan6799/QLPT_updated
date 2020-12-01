@@ -1,6 +1,6 @@
     <!-- //banner-->
     <!--/banner-bottom -->
-        <link rel="stylesheet" href="public/css/style.css" type="text/css" media="all" />
+        <link rel="stylesheet" href="client/css/style.css" type="text/css" media="all" />
 
 <?php 
     $class = isset($_SESSION["user_id"]) ? 'col-md-9' : 'col-md-12';
@@ -21,7 +21,7 @@
                 <div class="col-lg-3 shop-info-grid text-center mt-4">
                     <div class="product-shoe-info shoe">
                         <div class="men-thumb-item" >
-                            <img src="public/img/<?php echo $r->anh; ?>"  alt="" height="250px" width="200px">
+                            <img src="client/img/<?php echo $r->anh; ?>"  alt="" height="250px" width="200px">
                         </div>
                         <div class="item-info-product">
                             <h4>
