@@ -4,7 +4,7 @@
 	$time = $timestamp - 5;
 	$datetime = date("Y-m-d H:i:s", $time);
 	$messageModel = $data["messageModel"];
-	print_r($messageModel);
+	$messageModel->test();
     // $userModel = $data['userModel'];
     // $users = $userModel->getFriendsOfUser($_SESSION["user_id"]);
 

@@ -3,7 +3,9 @@
 	{
 		public function __construct(){
 			parent::__construct();
-			echo "xin chao model Message";
+		}
+		public function test(){
+			echo "function test Message model";
 		}
 		public function getMessageFromMeToUser($user_id)
 		{
