@@ -38,7 +38,7 @@ var my_id = $('#my_id').val() || null;
             var action = "update_time";
             var date = new Date().toLocaleString();
             $.ajax({
-                url: "ReloadEvery3s.php",
+                url: "mvc/Views/ReloadEvery3s.php",
                 method: "POST",
                 data: {action: action},
                 success: function(data){
@@ -52,7 +52,7 @@ var my_id = $('#my_id').val() || null;
             {
                 var action = "fetch_data";
                 $.ajax({
-                    url: "ReloadEvery3s.php",
+                    url: "mvc/Views/ReloadEvery3s.php",
                     method: "POST",
                     data: {action: action},
                     success: function(data){
