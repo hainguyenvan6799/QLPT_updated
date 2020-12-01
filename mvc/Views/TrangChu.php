@@ -135,5 +135,5 @@
             window.scrollTo(0, 1);
         }
 </script>
-<script type="text/javascript" src="client/js/chatbox.js"></script>
+<!-- <script type="text/javascript" src="client/js/chatbox.js"></script> -->
 </html>
