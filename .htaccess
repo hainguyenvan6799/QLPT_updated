@@ -4,4 +4,8 @@ RewriteCond %{REQUEST_FILENAME} !-f
 
 RewriteRule ^(.+)$ index.php?url=$1
 
+# / index.php?url=$1
+# client/css/chatbox.css index.php?url=client/css/chatbox.css
+# index.php?url=client/css/chatbox.css client/css/chatbox.css
 
+RewriteRule index.php?url=client/(.+)$ client/(.+)
