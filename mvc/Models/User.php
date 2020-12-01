@@ -4,9 +4,9 @@
 		public function __construct(){
 			parent::__construct();
 		}
-		// public function getUserCollection(){
-		// 	return parent::$userCollection;
-		// }
+		public function getUserCollection(){
+			return parent::$userCollection;
+		}
 		public function showUser($user_id)
 		{
 			$user = parent::$userCollection->findOne(['user_id' => $user_id]);
