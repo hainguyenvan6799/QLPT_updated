@@ -1,7 +1,7 @@
 <?php 
 	class BaseController
 	{
-		// public static $Model;
+		public static $Model;
 		// public static $Model1;
 		public static $userModel;
 		// public static $messageModel;
@@ -12,7 +12,7 @@
 		// public static $Model_phieuthue;
 		// public static $Model_phieutra;
 		public function __construct(){
-			// self::$Model = $this->model('PhongTro');
+			self::$Model = $this->model('PhongTro');
 			self::$userModel = $this->model('User');
 			// self::$Model1 = $this->model("ThietBi");
 			// self::$messageModel = $this->model("Message");

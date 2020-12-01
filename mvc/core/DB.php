@@ -16,7 +16,7 @@
 		// public static $phieuthutienCollection;
 		// public static $phieuthuephongCollection;
 		// public static $phieutraphongCollection;
-		// public static $phongtroCollection;
+		public static $phongtroCollection;
 		// public static $thietbiCollection;
 		// public static $lastIdCollection;
 
@@ -32,7 +32,7 @@
 			// self::$phieuthutienCollection = $db->phieuthutien;
 			// self::$phieuthuephongCollection = $db->phieuthuephong;
 			// self::$phieutraphongCollection = $db->phieutraphong;
-			// self::$phongtroCollection = $db->phongtro;
+			self::$phongtroCollection = $db->phongtro;
 			// self::$thietbiCollection = $db->thietbi;
 			// self::$lastIdCollection = $db->last_id_collection;
 		}

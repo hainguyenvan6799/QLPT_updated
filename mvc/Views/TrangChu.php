@@ -2,8 +2,6 @@
 <html>
 <head>
     <title>Trang chủ</title>
-    <style type="text/css">
-    </style>
     <?php 
         require_once "mvc/Views/setup-link-and-script.php";
     ?>
