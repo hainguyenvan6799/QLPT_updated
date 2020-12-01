@@ -3,6 +3,7 @@
 	{
 		public function __construct(){
 			parent::__construct();
+			echo "xin chao model Message";
 		}
 		public function getMessageFromMeToUser($user_id)
 		{
