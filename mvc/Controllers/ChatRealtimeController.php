@@ -111,16 +111,17 @@
 		}
 
 		public function test3s(){
-			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			$userModel = parent::$userModel;
-			$messageModel = parent::$messageModel;
-			$userCollection = parent::$userModel->getUserCollection();
+			// $user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+			// $userModel = parent::$userModel;
+			// $messageModel = parent::$messageModel;
+			// $userCollection = parent::$userModel->getUserCollection();
 
-			return $this->view("ChatRealtime/test",[
-				'userModel' => $userModel,
-				'messageModel' => $messageModel,
-				'userCollection' => $userCollection
-			]);
+			// return $this->view("ChatRealtime/test",[
+			// 	'userModel' => $userModel,
+			// 	'messageModel' => $messageModel,
+			// 	'userCollection' => $userCollection
+			// ]);
+			return $this->view("ChatRealtime/test", []);
 		}
 	}
  ?>
