@@ -32,6 +32,13 @@
 
 			parent::$userModel->acceptFriendRequest($from, $to);
 		}
+
+		public function getMyQrCode(){
+			$userModel = parent::$userModel;
+			return $this->view("User/myqrcode", [
+				'userModel' => $userModel
+			]);
+		}
 	}
 	
  ?>

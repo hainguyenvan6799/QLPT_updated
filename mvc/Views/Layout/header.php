@@ -13,7 +13,7 @@
                     <?php }else{ ?>
                         <a class="btn"><span class="fa fa-user-circle-o"></span> Xin chào <?php echo $_SESSION["name"]; ?></a>
                         <a href="#ex1" rel="modal:open">Gợi ý kết bạn</a>  
-                        <a href="myqrcode.php">MyQRCode</a>
+                        <a href="User/getMyQrCode">MyQRCode</a>
 
                       <div id="ex1" class="modal">
                         <input type="hidden" name="" id="userlogin_id" value="<?php echo $_SESSION["user_id"]; ?>">
