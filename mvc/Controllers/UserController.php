@@ -34,9 +34,9 @@
 		}
 
 		public function getMyQrCode(){
-			$userModel = parent::$userModel;
+			$userCollection = parent::$userModel->getUserCollection();
 			return $this->view("User/myqrcode", [
-				'userModel' => $userModel
+				'userCollection' => $userCollection
 			]);
 		}
 	}

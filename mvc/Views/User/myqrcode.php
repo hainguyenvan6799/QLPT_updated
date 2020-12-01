@@ -4,7 +4,7 @@
 	$text = $_SESSION["username"];
 	$text .= $_SESSION["password"];
 	echo $text;
-	$user = $data['userModel'];
+	$user = $data['userCollection'];
 	$user->updateMany(['user_id' => ['$ne' => null]],['$set' => ['qrcode_expire' => $time + 3600]]);
 	$fileName = md5(uniqid()).'.png';
 	$tempDir = 'client/imagesQR/';
