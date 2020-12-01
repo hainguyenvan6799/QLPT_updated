@@ -16,7 +16,7 @@
 			self::$userModel = $this->model('User');
 			self::$Model1 = $this->model("ThietBi");
 			self::$messageModel = $this->model("Message");
-			self::$Model_phieuthu = $this->model("phieuthu");
+			self::$Model_phieuthu = $this->model("PhieuThu");
 			self::$Model_phongtro = $this->model("PhongTro");
 			self::$Model_thietbi = $this->model("ThietBi");
 			self::$Model_khachthue = $this->model("KhachThue");

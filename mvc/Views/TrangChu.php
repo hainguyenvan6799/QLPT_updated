@@ -5,10 +5,8 @@
     <?php 
         require_once "mvc/Views/setup-link-and-script.php";
     ?>
-    
 </head>
 <body>
-
     <!-- Nhật -->
     <div class="main-sec inner-page">
         <!-- //header -->
