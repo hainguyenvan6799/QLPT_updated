@@ -1,4 +1,5 @@
 <?php 
+	require_once 'mvc/core/vendor/phpqrcode/qrlib.php';
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 	$time = strtotime(date('y-m-d H:i:s'));
 	$text = $_SESSION["username"];
