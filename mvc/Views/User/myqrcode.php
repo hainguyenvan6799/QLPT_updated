@@ -10,8 +10,10 @@
 	$tempDir = 'client/imagesQR/';
 	$filePath = $tempDir . $fileName;
 	$a = QRCode::png($text, $filePath);
+	print_r($a);
 	if(file_exists($filePath))
 	{
+		echo "co hinh ";
 		echo '<a href="'.$filePath.'" download="download qr code">';
 			echo '<img src="'.$filePath.'" />';
 		echo '</a>';
