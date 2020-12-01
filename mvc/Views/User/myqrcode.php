@@ -10,8 +10,8 @@
 	$fileName = md5(uniqid()).'.png';
 	$tempDir = 'client/imagesQR/';
 	$filePath = $tempDir . $fileName;
+	echo $filePath;
 	$a = QRCode::png($text, $filePath);
-	print_r($a);
 	if(file_exists($filePath))
 	{
 		echo "co hinh ";
