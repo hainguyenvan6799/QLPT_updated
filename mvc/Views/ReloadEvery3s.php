@@ -4,9 +4,10 @@
 	$time = $timestamp - 5;
 	$datetime = date("Y-m-d H:i:s", $time);
 	$messageModel = $data["messageModel"];
-    $userModel = $data['userModel'];
-    $users = $userModel->getFriendsOfUser($_SESSION["user_id"]);
+	print_r($messageModel);
+    // $userModel = $data['userModel'];
+    // $users = $userModel->getFriendsOfUser($_SESSION["user_id"]);
 
-    $userCollection = $data["userCollection"];
+    // $userCollection = $data["userCollection"];
  ?>
  
