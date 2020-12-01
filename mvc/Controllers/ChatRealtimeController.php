@@ -16,7 +16,7 @@
 			parent::__construct();
 		}
 		public function getChatView(){
-			$users = $this->userModel->getAllUserWithoutUserLogin();
+			$users = parent::$userModel->getAllUserWithoutUserLogin();
 
 			// $this->view('ChatRealtime/getChat',
 			// 	[
@@ -24,14 +24,14 @@
 			// 	]
 				//		);
 			$this->view("Admin/Master",[
-				"page"=>"../ChatRealtime/getChat",
-				"users"=>$this->userModel->getAllUserWithoutUserLogin()
+				"page"=>"ChatRealtime/getChat",
+				"users"=>parent::$userModel->getAllUserWithoutUserLogin()
 							]);
 
 		}
 		public function chatWith($user_id)
 		{
-			$message = $this->messageModel->getMessageFromMeToUser($user_id);
+			$message = parent::$messageModel->getMessageFromMeToUser($user_id);
 			$this->view('ChatRealtime/contentChat', [
 				"message" => $message
 			]);
@@ -43,7 +43,7 @@
 			$name_user_login = isset($_SESSION["name"]) ? $_SESSION['name'] : '';
 			$is_read = 0;
 
-			$this->messageModel->createMessage($from, $to, $message, $is_read);
+			parent::$messageModel->createMessage($from, $to, $message, $is_read);
 
 			$options = array(
 		    'cluster' => 'eu',
@@ -72,7 +72,7 @@
 		}
 
 		public function sendFrRequest(){
-			session_start();
+			// session_start();
 			$from_id = isset($_POST["from_id"]) ? $_POST["from_id"] : '';
 			$action = isset($_POST["action"]) ? $_POST["action"] : '';
 			$friend_id = isset($_POST["friend_id"]) ? $_POST["friend_id"] : '';
@@ -90,23 +90,36 @@
 		  $data['friend_id'] = $friend_id;
 		  $data["from_id"] = $from_id;
 
-		  $a = $this->userModel->sendFrRequest($from_id, $friend_id, $action);
+		  $a = parent::$userModel->sendFrRequest($from_id, $friend_id, $action);
 		  $pusher->trigger('my-channel', 'my-event', $data);
 
 		}
 
 		public function acceptFrRequest($from, $to){
-			$this->userModel->acceptFrRequest($from, $to);
+			parent::$userModel->acceptFrRequest($from, $to);
 
 		}
 
 		public function getChatBox(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			$getFriends = $this->userModel->getFriendsOfUser($user_login);
+			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
 			$this->view('ChatRealtime/chatbox', [
 				'getFriends' => $getFriends,
 				'page' => "TrangChu/TrangChu",
-				'data' => $this->Model->XemDSPhong_Them_PhongTrong()
+				'data' => parent::$Model->XemDSPhong_Them_PhongTrong()
+			]);
+		}
+
+		public function test3s(){
+			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
+			$userModel = parent::$userModel;
+			$messageModel = parent::$messageModel;
+			$userCollection = parent::$userModel->getUserCollection();
+
+			return $this->view("ChatRealtime/test",[
+				'userModel' => $userModel,
+				'messageModel' => $messageModel,
+				'userCollection' => $userCollection
 			]);
 		}
 	}

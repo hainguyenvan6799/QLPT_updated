@@ -7,12 +7,12 @@
 		public function ThemThietBi($tenThietBi, $maPhong, $tinhTrang, $soLuong)
 		{
 			// $this->thietbiCollection = (new MongoDB\Client)->phongtrodb->thietbi;
-			$data=$this->thietbiCollection->find([],['limit' => 1,'sort' => ['mathietbi' => -1],]);
+			$data=parent::$thietbiCollection->find([],['limit' => 1,'sort' => ['mathietbi' => -1],]);
 			$mathietbi;
 			foreach ($data as $row) {
 				$mathietbi=$row->mathietbi;
 			}
-			$document = $this->thietbiCollection->insertOne([
+			$document = parent::$thietbiCollection->insertOne([
 				"mathietbi" => $mathietbi+1,
 				"tenthietbi" =>  $tenThietBi,
 				"maphong" => $maPhong,
@@ -26,7 +26,7 @@
 			<body>
 				<script type="text/javascript">
 					alert("Thêm thiết bị thành công.");
-					window.location="../QuanLyThietBi/ThemThietBi";
+					window.location="QuanLyThietBi/ThemThietBi";
 				</script>
 			</body>
 			</html>
@@ -36,20 +36,20 @@
 		public function XemDSThietBi()
 		{
 			// $this->thietbiCollection = (new MongoDB\Client)->phongtrodb->thietbi;
-			$data=$this->thietbiCollection->find();
+			$data=parent::$thietbiCollection->find();
 			return $data;
 		}
 		public function DSThietBi($maphong)
 		{
 			// $this->thietbiCollection = (new MongoDB\Client)->phongtrodb->thietbi;
-			$data=$this->thietbiCollection->find(['maphong'=>$maphong],['sort' => ['tenthietbi' => 1],]);
+			$data=parent::$thietbiCollection->find(['maphong'=>$maphong],['sort' => ['tenthietbi' => 1],]);
 			return $data;
 		}
 		public function XoaThietBi($mathietbi)
 		{
 			$mathietbi=(int)$mathietbi;
 			// $this->thietbiCollection = (new MongoDB\Client)->phongtrodb->thietbi;
-			$data=$this->thietbiCollection->deleteOne(['mathietbi'=>$mathietbi]);
+			$data=parent::$thietbiCollection->deleteOne(['mathietbi'=>$mathietbi]);
 			?>
 			<html><head>
 			  <meta charset="UTF-8">
@@ -57,7 +57,7 @@
 			<body>
 				<script type="text/javascript">
 					alert("Xóa thiết bị thành công.");
-					window.location="../../QuanLyThietBi/XemDSThietBi";
+					window.location="QuanLyThietBi/XemDSThietBi";
 				</script>
 			</body>
 			</html>
@@ -70,7 +70,7 @@
 						['$count' => 'dem']
 						];
 				
-				$data = $this->thietbiCollection->aggregate($ops);
+				$data = parent::$thietbiCollection->aggregate($ops);
 				return $data;	
 			}	
 	}

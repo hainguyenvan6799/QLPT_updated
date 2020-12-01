@@ -7,7 +7,7 @@
 		public function ThemPhieuTraPhong(){
 			$this->view("Admin/Master",[
 				"page"=>"QuanLyTraPhong/ThemPhieuTra",
-				"data"=>$this->Model_phongtro->XemDSPhong_Them_DaThue()
+				"data"=>parent::$Model_phongtro->XemDSPhong_Them_DaThue()
 			]);
 		}
 
@@ -18,13 +18,13 @@
 			$ngayTra =($_POST["ngaytra"]);
 			$tienCoc =($_POST["tiencoc"]);
 			$ghiChu =($_POST["ghichu"]);
-			$this->Model_phieutra->ThemPhieuTra($maPhieuThue,$maPhong, $cMT, $ngayTra, $tienCoc, $ghiChu);
-			$this->Model_phongtro->CapNhatTrangThai_TP($maPhong);
+			parent::$Model_phieutra->ThemPhieuTra($maPhieuThue,$maPhong, $cMT, $ngayTra, $tienCoc, $ghiChu);
+			parent::$Model_phongtro->CapNhatTrangThai_TP($maPhong);
 		}
 		public function ajax(){
 			if(isset($_POST['get_option']))
 			{
-				$this->Model_phieuthue->ajax($_POST["get_option"]);
+				parent::$Model_phieuthue->ajax($_POST["get_option"]);
 			}
 		}
 	}

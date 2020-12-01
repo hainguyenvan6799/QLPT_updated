@@ -1,8 +1,4 @@
-<?php 
-	// require_once "./mvc/core/vendor/autoload.php";
-	// require_once "./mvc/core/DB.php";
-	// require_once "//mvc/Models/User.php";
-	// require_once "//mvc/Models/Message.php";
+<?php
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 	$timestamp = strtotime(date("Y-m-d H:i:s"));
 	$time = $timestamp - 5;
@@ -85,7 +81,7 @@
 					{
  		?>
  		<td><button class="nhanvao addClass" id="<?php echo $friend->user_id; ?>" friend_name="<?php echo $friend->name; ?>"><?php echo $friend->name; ?></button></td>
- 		<td>Đã hoạt động <?php echo $message->time_elapsed_B($timestamp - strtotime($friend->last_login)); ?></td>
+ 		<td>Đã hoạt động <?php echo $messageModel->time_elapsed_B($timestamp - strtotime($friend->last_login)); ?></td>
  	<?php } ?>
  	</tr>
  	<?php }}}} ?>

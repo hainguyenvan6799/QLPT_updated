@@ -7,7 +7,7 @@
 		public function ThemThietBi(){
 			$this->view("Admin/Master",[
 				"page"=>"QuanLyThietBi/ThemThietBi",
-				"data"=>$this->Model_phongtro->XemDSPhong_Them()
+				"data"=>parent::$Model_phongtro->XemDSPhong_Them()
 			]);
 		}
 
@@ -17,17 +17,17 @@
 			$maPhong = ($_POST["maphong"]);
 			$tinhTrang = ($_POST["tinhtrang"]);
 			$soLuong =($_POST["soluong"]);
-			$this->Model_thietbi->ThemThietBi($tenThietBi, $maPhong, $tinhTrang, $soLuong);
+			parent::$Model_thietbi->ThemThietBi($tenThietBi, $maPhong, $tinhTrang, $soLuong);
 		}
 		public function XemDSThietBi(){
 			$this->view("Admin/Master",[
 				"page"=>"QuanLyThietBi/XemDSThietBi",
-				"data"=>$this->Model_thietbi->XemDSThietBi()
+				"data"=>parent::$Model_thietbi->XemDSThietBi()
 			]);
 
 		}
 		public function XoaThietBi($mathietbi){
-			$this->Model_thietbi->XoaThietBi($mathietbi);
+			parent::$Model_thietbi->XoaThietBi($mathietbi);
 		}
 
 	}

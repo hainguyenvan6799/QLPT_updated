@@ -8,7 +8,7 @@
 			//$this->Model->ajax();
 			$this->view("Admin/Master",[
 				"page"=>"QuanLyThuePhong/ThemPhieuThue",
-				"data"=>$this->Model_phongtro->XemDSPhong_Them_PhongTrong()
+				"data"=>parent::$Model_phongtro->XemDSPhong_Them_PhongTrong()
 			]);
 		}
 
@@ -23,9 +23,9 @@
 			$ngheNghiep =($_POST["nghenghiep"]);
 			$sDT =($_POST["sdt"]);
 			$diaChi =($_POST["diachi"]);
-			$this->Model_khachthue->ThemKhachThue($cMT, $hoTen, $gioiTinh, $ngheNghiep, $sDT, $diaChi,$maPhong);
-			$this->Model_phieuthue->ThemPhieuThue($maPhong, $cMT, $ngayThue, $tienCoc, $ghiChu);
-			$this->Model_phongtro->CapNhatTrangThai($maPhong);
+			parent::$Model_khachthue->ThemKhachThue($cMT, $hoTen, $gioiTinh, $ngheNghiep, $sDT, $diaChi,$maPhong);
+			parent::$Model_phieuthue->ThemPhieuThue($maPhong, $cMT, $ngayThue, $tienCoc, $ghiChu);
+			parent::$Model_phongtro->CapNhatTrangThai($maPhong);
 		}
 		
 	}

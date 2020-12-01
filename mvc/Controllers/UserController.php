@@ -21,7 +21,7 @@
 		  $data["from"] = (int)$from;
 		  $data["to"] = (int)$to;
 		  $data["action"] = "sendFrRequest";
- 			$this->userModel->sendFrRequest($from, $to);
+ 			parent::$userModel->sendFrRequest($from, $to);
  			$pusher->trigger('sendFriendRequest', 'FriendsRequestEvent', $data);
 		}
 
@@ -30,7 +30,7 @@
 			$from = $_POST["accept_id"];
 			$to = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : null;
 
-			$this->userModel->acceptFriendRequest($from, $to);
+			parent::$userModel->acceptFriendRequest($from, $to);
 		}
 	}
 	

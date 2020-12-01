@@ -17,11 +17,11 @@
 		public function Home(){
 			$this->view("Admin/Master",[
 				"page"=>"Home/Home",
-				"dsphieuthu"=>$this->Model_phieuthu->XemDsPhieuThu_Limit_5(),
-				"sokhachthue"=>$this->Model_khachthue->Count_khachthue(),
-				"sothietbi"=>$this->Model_thietbi->Count_thietbi(),
-				"sophongtro"=>$this->Model_phongtro->Count_phongtro(),
-				"sophongtrothue"=>$this->Model_phongtro->Count_phongtro_thue(),
+				"dsphieuthu"=>parent::$Model_phieuthu->XemDsPhieuThu_Limit_5(),
+				"sokhachthue"=>parent::$Model_khachthue->Count_khachthue(),
+				"sothietbi"=>parent::$Model_thietbi->Count_thietbi(),
+				"sophongtro"=>parent::$Model_phongtro->Count_phongtro(),
+				"sophongtrothue"=>parent::$Model_phongtro->Count_phongtro_thue(),
 
 			]);
 			//$this->Model_khachthue->Count_khachthue();

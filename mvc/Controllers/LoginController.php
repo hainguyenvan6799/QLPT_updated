@@ -14,7 +14,7 @@
 		public function postFormLogin(){
 			$username = $_POST["username"];
 			$password = $_POST["password"];
-			$this->userModel->checkForLogin($username, $password);
+			parent::$userModel->checkForLogin($username, $password);
 		}
 		public function logout(){
 			if(isset($_SESSION["user_id"]) or isset($_SESSION["admin"]))
@@ -25,7 +25,7 @@
 		}
 		public function loginQrCode(){
 			$contentQRCode = isset($_POST["content"]) ? $_POST["content"] : null;
-			$a = $this->userModel->loginQrCode($contentQRCode);
+			$a = parent::$userModel->loginQrCode($contentQRCode);
 			
 		}
 	}

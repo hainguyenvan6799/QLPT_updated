@@ -6,13 +6,13 @@
 		}
 		public function ThemKhachThue($cMT, $hoTen, $gioiTinh, $ngheNghiep, $sDT, $diaChi,$maPhong)
 		{
-			$data=$this->khachthueCollection->find([],['limit' => 1,'sort' => ['makhachthue' => -1],]);
+			$data= parent::$khachthueCollection->find([],['limit' => 1,'sort' => ['makhachthue' => -1],]);
 			$makhachthue;
 			foreach ($data as $row) {
 				$makhachthue=$row->makhachthue;
 			}
 			$maPhong=(int)$maPhong;
-			$document = $this->khachthueCollection->insertOne([
+			$document = parent::$khachthueCollection->insertOne([
 				"makhachthue" =>$makhachthue+1,
 				"cmt" => $cMT,
 				"hoten" =>  $hoTen,
@@ -46,7 +46,7 @@
 						['$sort' => ['makhachthue' => -1]]
 		
 					];
-			$data = $this->khachthueCollection->aggregate($ops);
+			$data = parent::$khachthueCollection->aggregate($ops);
 			return $data;
 
 					
@@ -85,7 +85,7 @@
 						]
 		
 					];
-			$data = $this->khachthueCollection->aggregate($ops);
+			$data = parent::$khachthueCollection->aggregate($ops);
 			return $data;
 			}
 			public function Count_khachthue()
@@ -95,7 +95,7 @@
 						['$count' => 'dem']
 						];
 				
-				$data = $this->khachthueCollection->aggregate($ops);
+				$data = parent::$khachthueCollection->aggregate($ops);
 				return $data;	
 				// foreach ($data as $r ) {
 				// 	echo '<hr>';

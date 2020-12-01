@@ -10,7 +10,7 @@
 		public function postFormRegister(){
 			$userName = $_POST["username"];
 			$password = $_POST["password"];
-			$this->userModel->createNewUser($userName, $password);
+			parent::$userModel->createNewUser($userName, $password);
 		}
 	}
  ?>

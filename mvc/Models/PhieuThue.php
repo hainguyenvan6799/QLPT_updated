@@ -7,12 +7,12 @@
 		public function ThemPhieuThue($maPhong, $cMT, $ngayThue, $tienCoc, $ghiChu)
 		{
 			// $this->phieuthuephongCollection = (new MongoDB\Client)->phongtrodb->phieuthuephong;
-			$data=$this->phieuthuephongCollection->find([],['limit' => 1,'sort' => ['maphieuthue' => -1],]);
+			$data=parent::$phieuthuephongCollection->find([],['limit' => 1,'sort' => ['maphieuthue' => -1],]);
 			$maphieuthue;
 			foreach ($data as $row) {
 				$maphieuthue=$row->maphieuthue;
 			}
-			$document = $this->phieuthuephongCollection->insertOne([
+			$document = parent::$phieuthuephongCollection->insertOne([
 				"maphieuthue" => $maphieuthue+1,
 				"maphong" =>  $maPhong,
 				"cmt" => $cMT,
@@ -43,7 +43,7 @@
    						['$limit' => 1]
 		
 					];
-				$data = $this->phieuthuephongCollection->aggregate($ops);
+				$data = parent::$phieuthuephongCollection->aggregate($ops);
 				foreach($data as $r)
 				{
 					 foreach($r->khachthue as $a)

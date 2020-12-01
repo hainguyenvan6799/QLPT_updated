@@ -18,7 +18,7 @@
 			// 	echo $m->message;
 			// }
 
-			$message =  $this->messageCollection->find($filter);
+			$message =  parent::$messageCollection->find($filter);
 
 			// $bulk = new MongoDB\Driver\BulkWrite;
 			// $bulk->update(
@@ -28,7 +28,7 @@
 			// );
 
 			// $result = $this->mongoConnection->executeBulkWrite("phongtrodb.message", $bulk);
-			$this->messageCollection->updateMany(
+			parent::$messageCollection->updateMany(
 				[ 'from' => 1, 'to'=> 3, 'is_read' => 0],
 			    ['$set' => ['is_read' => 1]],
 			    ['multi' => true, 'upsert' => false]
@@ -46,7 +46,7 @@
 				"is_read" => $is_read,
 				"time" => date("Y-m-d H:i:s")
 			];
-			$this->messageCollection->insertOne($document);
+			parent::$messageCollection->insertOne($document);
 		}
 
 		public function countMessageNoRead($from){
@@ -79,7 +79,7 @@
 
 					
 			];
-			$result = $this->messageCollection->aggregate($ops);
+			$result = parent::$messageCollection->aggregate($ops);
 			foreach($result as $r)
 			{
 				$count = $r["count"];

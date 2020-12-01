@@ -6,5 +6,4 @@
 	// cái này giống như middleware
 	require_once "./mvc/core/DB.php";
 	
-	
 ?>

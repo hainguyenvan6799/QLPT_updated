@@ -7,13 +7,13 @@
 		public function ThemPhieuThu($maPhong, $cMT, $soDien, $giaDien, $soNuoc, $giaNuoc, $giaPhong, $tongTien, $ngayGhi, $ghiChu )
 		{
 			// $this->phieuthutienCollection = (new MongoDB\Client)->phongtrodb->phieuthutien;
-			$data=$this->phieuthutienCollection->find([],['limit' => 1,'sort' => ['maphieuthu' => -1],]);
+			$data= parent::$phieuthutienCollection->find([],['limit' => 1,'sort' => ['maphieuthu' => -1],]);
 			$maphieuthu;
 			foreach ($data as $row) {
 				$maphieuthu=$row->maphieuthu;
 			}
 			$maPhong=(int)$maPhong;
-			$document = $this->phieuthutienCollection->insertOne([
+			$document = parent::$phieuthutienCollection->insertOne([
 				"maphieuthu" => $maphieuthu+1,
 				"maphong" =>  $maPhong,
 				"cmt" => $cMT,
@@ -26,7 +26,7 @@
 				"ngayghi" => $ngayGhi,
 				"ghichu" => $ghiChu
 			]);
-			$data1=$this->khachthueCollection->find(['cmt'=>$cMT],['limit' => 1]);
+			$data1= parent::$khachthueCollection->find(['cmt'=>$cMT],['limit' => 1]);
 			$sdt='';
 			$hoten='';
 			foreach ($data1 as $r) {
@@ -54,7 +54,7 @@
 			<body>
 				<script type="text/javascript">
 					alert("Thêm phiếu thu thành công.");
-					window.location="../QuanLyThuTien/ThemPhieuThu";
+					window.location="QuanLyThuTien/ThemPhieuThu";
 				</script>
 			</body>
 			</html>
@@ -74,7 +74,7 @@
 						['$sort' => ['maphieuthu' => -1]]
 		
 					];
-			$data = $this->phieuthutienCollection->aggregate($ops);
+			$data = parent::$phieuthutienCollection->aggregate($ops);
 			
 			return $data;
 		}
@@ -106,7 +106,7 @@
 						]
 		
 					];
-			$data = $this->phieuthutienCollection->aggregate($ops);
+			$data = parent::$phieuthutienCollection->aggregate($ops);
 			return $data;
 		}
 		public function XemDsPhieuThu_Limit_5()
@@ -132,7 +132,7 @@
 						['$sort' => ['maphieuthu' => -1]],
 						['$limit' => 5],		
 					];
-			$data = $this->phieuthutienCollection->aggregate($ops);
+			$data = parent::$phieuthutienCollection->aggregate($ops);
 			return $data;
 		}
 

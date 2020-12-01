@@ -7,7 +7,7 @@
 		public function ThemPhieuTra($maPhieuThue,$maPhong, $cMT, $ngayTra, $tienCoc, $ghiChu)
 		{
 			// $collection = (new MongoDB\Client)->phongtrodb->phieutraphong;
-			$document = $this->phieutraphongCollection->insertOne([
+			$document = parent::$phieutraphongCollection->insertOne([
 				"maphieutra" => $maPhieuThue,
 				"maphong" =>  $maPhong,
 				"cmt" => $cMT,
