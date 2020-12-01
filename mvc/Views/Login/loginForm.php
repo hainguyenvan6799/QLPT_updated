@@ -25,8 +25,8 @@ if(isset($_SESSION["user_id"]))
 <head>
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <script type="text/javascript" src="public/js/jquery.min.js"></script>
-    <script type="text/javascript" src="public/js/instascan.min.js"></script>
+    <script type="text/javascript" src="client/js/jquery.min.js"></script>
+    <script type="text/javascript" src="client/js/instascan.min.js"></script>
     <style type="text/css">
         body {
     background: #DCDDDF url(https://cssdeck.com/uploads/media/items/7/7AF2Qzt.png);

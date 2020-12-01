@@ -1,6 +1,6 @@
 <?php 
-	require_once './mvc/core/vendor/phpqrcode/qrlib.php';
-	require_once './mvc/core/vendor/autoload.php';
+	require_once 'mvc/core/vendor/phpqrcode/qrlib.php';
+	require_once 'mvc/core/vendor/autoload.php';
 	session_start();
 	date_default_timezone_set('Asia/Ho_Chi_Minh');
 	$time = strtotime(date('y-m-d H:i:s'));
@@ -18,13 +18,13 @@
 
 
 	$fileName = md5(uniqid()).'.png';
-	$tempDir = './public/imagesQR/';
+	$tempDir = 'client/imagesQR/';
 	$filePath = $tempDir . $fileName;
 	$a = QRCode::png($text, $filePath);
 	if(file_exists($filePath))
 	{
-		echo '<a href="./'.$filePath.'" download="download qr code">';
-			echo '<img src="./'.$filePath.'" />';
+		echo '<a href="'.$filePath.'" download="download qr code">';
+			echo '<img src="'.$filePath.'" />';
 		echo '</a>';
 	}
  ?>
