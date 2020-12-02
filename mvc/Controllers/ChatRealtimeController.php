@@ -18,7 +18,7 @@
 				"page"=>"ChatRealtime/getChat",
 				"messageModel"=>$messageModel,
 				"users"=>parent::$userModel->getAllUserWithoutUserLogin()
-							]);
+			]);
 
 		}
 		public function chatWith($user_id)

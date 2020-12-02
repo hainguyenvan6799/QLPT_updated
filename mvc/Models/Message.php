@@ -32,7 +32,7 @@
 
 			// $result = $this->mongoConnection->executeBulkWrite("phongtrodb.message", $bulk);
 			parent::$messageCollection->updateMany(
-				[ 'from' => 1, 'to'=> 3, 'is_read' => 0],
+				[ 'from' => (int)$user_id, 'to'=> (int)$my_id, 'is_read' => 0],
 			    ['$set' => ['is_read' => 1]],
 			    ['multi' => true, 'upsert' => false]
 			);
