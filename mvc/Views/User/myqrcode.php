@@ -12,12 +12,12 @@
 	$filePath = $tempDir . $fileName;
 	echo $filePath;
 	$a = QRCode::png($text);
-	// print_r($a);
-	// if(file_exists($filePath))
-	// {
-	// 	echo "co hinh ";
-	// 	echo '<a href="'.$filePath.'" download="download qr code">';
-	// 		echo '<img src="'.$filePath.'" />';
-	// 	echo '</a>';
-	// }
+	print_r($a);
+	if(file_exists($filePath))
+	{
+		echo "co hinh ";
+		echo '<a href="'.$filePath.'" download="download qr code">';
+			echo '<img src="'.$filePath.'" />';
+		echo '</a>';
+	}
  ?>
