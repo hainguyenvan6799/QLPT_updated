@@ -39,9 +39,9 @@
 			$client = new Nexmo\Client($basic);
 
 			$message = $client->message()->send([
-			    'to' =>$sdt,
+			    'to' =>'+84' . (int)$sdt,
 			    'from' => 'Vonage APIs',
-			    'text' => $Content
+			    'text' => "acb"
 			]);
 
 
