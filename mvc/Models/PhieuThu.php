@@ -6,6 +6,7 @@
 		}
 		public function ThemPhieuThu($maPhong, $cMT, $soDien, $giaDien, $soNuoc, $giaNuoc, $giaPhong, $tongTien, $ngayGhi, $ghiChu )
 		{
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
 			// $this->phieuthutienCollection = (new MongoDB\Client)->phongtrodb->phieuthutien;
 			$data= parent::$phieuthutienCollection->find([],['limit' => 1,'sort' => ['maphieuthu' => -1],]);
 			$maphieuthu;
