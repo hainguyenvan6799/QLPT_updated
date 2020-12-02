@@ -1,3 +1,1 @@
-<?php 
-	echo $data['filePath'];
- ?>
+<img src="<?php echo $data['filePath']; ?>">
