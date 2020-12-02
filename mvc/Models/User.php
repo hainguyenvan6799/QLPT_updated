@@ -80,13 +80,13 @@
 				echo '<script>window.location.href="Login/getFormLogin";</script>';
 			}
 		}
-		// public function getAllUserWithoutUserLogin(){
-		// 	$my_id = $_SESSION['user_id'];
-		// 	$this->filter = ["user_id"=>['$ne'=>$my_id]]; // not equal
-		// 	$this->query = new MongoDB\Driver\Query($this->filter, $this->options);
-		// 	$users = $this->mongoConnection->executeQuery("phongtrodb.users", $this->query);
-		// 	return $users;
-		// }
+		public function getAllUserWithoutUserLogin(){
+			$my_id = $_SESSION['user_id'];
+			$filter = ["user_id"=>['$ne'=>$my_id]]; // not equal
+			
+			$users = parent::$userCollection->find($filter);
+			return $users;
+		}
 
 		public function sendFrRequest($from, $to){
 			parent::$userCollection->updateOne(

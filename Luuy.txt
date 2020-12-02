@@ -71,3 +71,6 @@ $count = $this->userCollection->countDocuments(
 
                 );
                 }
+
+
+heroku run bash --app phongtrongoisao
