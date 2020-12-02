@@ -7,6 +7,7 @@
 		}
 		public function getChatView(){
 			$users = parent::$userModel->getAllUserWithoutUserLogin();
+			$messageModel = parent::$messageModel;
 
 			// $this->view('ChatRealtime/getChat',
 			// 	[
@@ -15,6 +16,7 @@
 				//		);
 			$this->view("Admin/Master",[
 				"page"=>"ChatRealtime/getChat",
+				"messageModel"=>$messageModel,
 				"users"=>parent::$userModel->getAllUserWithoutUserLogin()
 							]);
 

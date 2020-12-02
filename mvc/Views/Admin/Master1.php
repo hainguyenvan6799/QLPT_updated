@@ -13,11 +13,11 @@ if(!isset($_SESSION["admin"]))
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="public/plugins/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="client/plugins/fontawesome-free/css/all.min.css">
 <!-- Theme style -->
-  <link rel="stylesheet" href="public/dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="client/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="public/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <link rel="stylesheet" href="client/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -53,7 +53,7 @@ if(!isset($_SESSION["admin"]))
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="#" class="brand-link">
-      <img src="public/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
+      <img src="client/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Nhà Trọ</span>
     </a>
@@ -63,7 +63,7 @@ if(!isset($_SESSION["admin"]))
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="public/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+          <img src="client/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
           <a href="#" class="d-block">Herry</a>
@@ -244,7 +244,7 @@ if(!isset($_SESSION["admin"]))
 <!-- ./wrapper -->
 
 <!-- jQuery -->
-<script src="public/plugins/jquery/jquery.min.js"></script>
+<script src="client/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
@@ -253,9 +253,9 @@ if(!isset($_SESSION["admin"]))
 </script>
 
 <!-- overlayScrollbars -->
-<script src="public/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<script src="client/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
 <!-- AdminLTE App -->
-<script src="public/dist/js/adminlte.js"></script>
+<script src="client/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 
 </body>

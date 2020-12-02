@@ -2,7 +2,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="public/home/css/main.css">
+    <link rel="stylesheet" href="client/home/css/main.css">
 </head>
     <div class="content-wrapper">
     <div class="wrapper">
@@ -21,7 +21,7 @@
                                         }
                                     ?>
                                 </div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="public/home/assets/arrow-right.svg" alt=""></div>
+                                <div class="right__cardDesc">Xem Chi Tiết <img src="client/home/assets/arrow-right.svg" alt=""></div>
                             </a>
                             <a class="right__card" href="QuanLyPhongTro/XemDSPhong">
                                 <div class="right__cardTitle">Đã thuê</div>
@@ -33,7 +33,7 @@
                                         }
                                     ?>
                                 </div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="public/home/assets/arrow-right.svg" alt=""></div>
+                                <div class="right__cardDesc">Xem Chi Tiết <img src="client/home/assets/arrow-right.svg" alt=""></div>
                             </a>
                             <a class="right__card" href="QuanLyThietBi/XemDSThietBi">
                                 <div class="right__cardTitle">Thiết bị</div>
@@ -45,7 +45,7 @@
                                         }
                                     ?>
                                 </div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="public/home/assets/arrow-right.svg" alt=""></div>
+                                <div class="right__cardDesc">Xem Chi Tiết <img src="client/home/assets/arrow-right.svg" alt=""></div>
                             </a>
                             <a class="right__card" href="QuanLyKhachThue/XemDSKhachThue">
                                 <div class="right__cardTitle">Khách thuê</div>
@@ -57,7 +57,7 @@
                                         }
                                     ?>
                                 </div>
-                                <div class="right__cardDesc">Xem Chi Tiết <img src="public/home/assets/arrow-right.svg" alt=""></div>
+                                <div class="right__cardDesc">Xem Chi Tiết <img src="client/home/assets/arrow-right.svg" alt=""></div>
                             </a>
                         </div>
                         <div class="right__table">
@@ -101,12 +101,12 @@
                                 </table>
                             </div>
 
-                            <a href="QuanLyThuTien/XemDSPhieuThu" class="right__tableMore"><p>Xem tất cả các phiếu thu</p> <img src="public/home/assets/arrow-right-black.svg" alt=""></a>
+                            <a href="QuanLyThuTien/XemDSPhieuThu" class="right__tableMore"><p>Xem tất cả các phiếu thu</p> <img src="client/home/assets/arrow-right-black.svg" alt=""></a>
                         </div>
                     </div>
                 </div>
             </div>
 </div>
     
-    <script src="public/home/js/main.js"></script>
+    <script src="client/home/js/main.js"></script>
 

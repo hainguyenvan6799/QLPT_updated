@@ -45,8 +45,8 @@
     
 </body>
 
-<script src="public/js/chatrealtime/pusher7.js"></script>
-<script src="public/js/jquery351.js"></script>
+<script src="client/js/chatrealtime/pusher7.js"></script>
+<script src="client/js/jquery351.js"></script>
 <script>
         addEventListener("load", function() {
             setTimeout(hideURLbar, 0);
@@ -56,5 +56,5 @@
             window.scrollTo(0, 1);
         }
 </script>
-<script type="text/javascript" src="public/js/chatbox.js"></script>
+<script type="text/javascript" src="client/js/chatbox.js"></script>
 </html>

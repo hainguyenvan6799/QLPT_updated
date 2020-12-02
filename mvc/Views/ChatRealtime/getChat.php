@@ -1,7 +1,3 @@
-<?php 
-    require_once './mvc/Models/Message.php';
-    $messageModel = new Message;
- ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,12 +9,12 @@
     <meta name="csrf-token" content="">
 
 	<!-- Script -->
-	<!-- <script type="text/javascript" src="../public/js/app.js"></script> -->
+	<!-- <script type="text/javascript" src="../client/js/app.js"></script> -->
 
 	<!-- css -->
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="public/css/app.css">
+    <link rel="stylesheet" type="text/css" href="client/css/app.css">
 	 <style type="text/css">
         ul
         {
@@ -166,7 +162,7 @@
 		                            <span class="pending">
                                         <?php 
                                             
-                                            $count = $messageModel->countMessageNoRead($u->user_id);
+                                            $count = $data['messageModel']->countMessageNoRead($u->user_id);
                                             echo $count;
                                          ?>      
                                     </span>
@@ -221,8 +217,8 @@
     </div>
 </div>
 </body>
-<script src="public/js/chatrealtime/pusher7.js"></script>
-<script src="public/js/jquery351.js"></script>
+<script src="https://js.pusher.com/7.0/pusher.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script type="text/javascript">
 	let my_id = $('#my_id').val();
 	let user_id = 0;
