@@ -223,8 +223,8 @@ if(!isset($_SESSION["admin"]))
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-    <?<?php 
-      require_once "./mvc/Views/Admin/".$data["page"].".php";
+    <?php 
+      require_once "mvc/Views/Admin/".$data["page"].".php";
      ?>
   <!-- /.content-wrapper -->
   <footer class="main-footer">

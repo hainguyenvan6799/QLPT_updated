@@ -54,7 +54,7 @@ final class Versions
   'pusher/pusher-php-server' => 'v4.1.4@e75e5715e3b651ec20dee5844095aadefab81acb',
   'ralouphie/getallheaders' => '3.0.3@120b605dfeb996808c31b6477290a714d356e822',
   'vonage/nexmo-bridge' => '0.1.0@62653b1165f4401580ca8d2b859f59c968de3711',
-  '__root__' => 'dev-master@687abf4f1ddb58c0d7fc576cebb07b8a19f1d5a6',
+  '__root__' => 'dev-master@902255e0c62d4ef050de60173caa8b0139ad51d5',
 );
 
     private function __construct()
