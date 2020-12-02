@@ -34,9 +34,23 @@
 		}
 
 		public function getMyQrCode(){
+			$user_id = isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null;
+
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
+			$time = strtotime(date('y-m-d H:i:s'));
+			$text = $_SESSION["username"];
+			$text .= $_SESSION["password"];
 			$userCollection = parent::$userModel->getUserCollection();
+			$userUpdate = $userCollection->updateOne(
+				['user_id' => $user_id],
+				['$set'=>['qrcode_expire' => $time + 3600]]
+			);
+			$fileName = md5(uniqid()).'.png';
+			$tempDir = 'client/imagesQR/';
+			$filePath = $tempDir . $fileName;
+			$a = QRCode::png($text, $filePath);
 			return $this->view("User/myqrcode", [
-				'userCollection' => $userCollection
+				'filePath' => $filePath
 			]);
 		}
 	}
