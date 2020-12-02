@@ -2,7 +2,7 @@
 	class QuanLyThietBiController extends BaseController
 	{
 		public function __construct(){
-			parent::construct();
+			parent::__construct();
 		}
 		public function ThemThietBi(){
 			$this->view("Admin/Master",[

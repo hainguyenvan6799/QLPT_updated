@@ -18,7 +18,7 @@
     <?php } ?>
 
     <div id="user_login_status">
-        
+        <!-- load ReloadEvery3s.php -->
     </div>
 
     
