@@ -45,7 +45,7 @@
 			$message = $client->message()->send([
 			    'to' => '84368945209',
 			    'from' => 'NXSMS',
-			    'text' => 'Hello from Vonage SMS API'
+			    'text' => 'Hello'
 			]);
 
 
