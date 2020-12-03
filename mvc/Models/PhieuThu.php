@@ -43,7 +43,7 @@
 
 
 			$message = $client->message()->send([
-			    'to' => '84' . $sdt,
+			    'to' => '84379343794',
 			    'from' => 'NXSMS',
 			    'text' => 'Hello Xin Chao'
 			]);
