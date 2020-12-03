@@ -12,7 +12,7 @@
                         <a href="Register/getFormRegister" class="btn"><span class="fa fa-pencil-square-o"></span> Đăng kí</a>
                     <?php }else{ ?>
                       <?php if(isset($_SESSION['admin'])){ ?>
-                        <a class="btn" href="Amin/Home"><span class="fa fa-user-circle-o"></span>Đến trang quản trị</a>
+                        <a class="btn" href="Admin/Home"><span class="fa fa-user-circle-o"></span>Đến trang quản trị</a>
                       <?php }else{ ?>
                         <a class="btn"><span class="fa fa-user-circle-o"></span> Xin chào <?php echo $_SESSION["name"]; ?></a>
                       <?php } ?>
@@ -147,27 +147,44 @@
 
             $('.addFr-request').on('click', function(){
               addFr_id = $(this).attr("id");
-              $(this).val("Hủy");
-              $.ajax({
+              $(this).val("Đã gửi lời mời kết bạn");
+              if($(this).attr('disabled') == 'disabled')
+              {
+                alert('bi disabled roi');
+              }
+              else
+              {
+                $.ajax({
                 url:"User/sendAddFreRequest",
                 method: "post",
                 data: {addFr_id: addFr_id},
                 success: function(data){
                 
                 }
-              });
+              });  
+              }
+              
+               $(this).attr('disabled', 'disabled');
             });
 
             $('.acceptFr-request').on('click', function(){
               accept_id = $(this).attr('id');
-              $.ajax({
-                url:"User/acceptAddFreRequest",
-                method: "post",
-                data: {accept_id: accept_id},
-                success: function(data){
-                
-                }
-              });
+              if($(this).attr('disabled') == 'disabled')
+              {
+                alert('bi disabled roi');
+              }
+              else
+              {
+                $.ajax({
+                  url:"User/acceptAddFreRequest",
+                  method: "post",
+                  data: {accept_id: accept_id},
+                  success: function(data){
+                  
+                  }
+                });
+              }
+              $(this).attr('disabled', 'disabled');
             });
           });
         </script>
