@@ -37,15 +37,15 @@
 			$Content="Chao Anh/Chi ".$hoten.". Thong bao thu tien ngay ".$ngayGhi.". So dien ".$soDien."kW, gia ".$giaDien." VND/kW, so nuoc ".$soNuoc."khoi, gia ".$giaNuoc." VND/khoi, gia phong ".$giaPhong." VND/thang. Tong tien: ".$tongTien."VND.";
 			// require_once "./mvc/core/vendor/autoload.php";
 
-			$basic  = new \Nexmo\Client\Credentials\Basic('8815c793', 'ObpppFylQdD6h8Pz');
+			$basic  = new \Nexmo\Client\Credentials\Basic('fdcdea23', 'sZVUpf56shf5IqgK');
 			$client = new \Nexmo\Client($basic);
 
 
 
 			$message = $client->message()->send([
-			    'to' =>'84379343794',
+			    'to' => '84368945209',
 			    'from' => 'NXSMS',
-			    'text' => 'acb'
+			    'text' => 'Hello from Vonage SMS API'
 			]);
 
 
