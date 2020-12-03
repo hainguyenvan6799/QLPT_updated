@@ -11,7 +11,11 @@
                          <a href="Login/getFormLogin" class="btn"><span class="fa fa-user-circle-o"></span> Đăng nhập</a>
                         <a href="Register/getFormRegister" class="btn"><span class="fa fa-pencil-square-o"></span> Đăng kí</a>
                     <?php }else{ ?>
+                      <?php if(isset($_SESSION['admin'])){ ?>
+                        <a class="btn"><span class="fa fa-user-circle-o"></span>Đến trang quản trị</a>
+                      <?php }else{ ?>
                         <a class="btn"><span class="fa fa-user-circle-o"></span> Xin chào <?php echo $_SESSION["name"]; ?></a>
+                      <?php } ?>
                         <a href="#ex1" rel="modal:open">Gợi ý kết bạn</a>  
                         <a href="User/getMyQrCode">MyQRCode</a>
 

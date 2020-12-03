@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Trang chủ</title>
+    <link rel="shortcut icon" type="image/png" href="client/images/favicon.png">
     <?php 
         require_once "mvc/Views/setup-link-and-script.php";
     ?>

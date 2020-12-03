@@ -30,13 +30,17 @@ if(!isset($_SESSION["admin"]))
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
-        <a href="Admin/Home" class="nav-link">Trang chủ</a>
+        <a href="Admin/Home" class="nav-link">Admin Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
         <a href="Login/logout" class="nav-link">Đăng xuất</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
         <a href="ChatRealtime/getChatView" class="nav-link">Message</a>
+      </li>
+
+      <li class="nav-item d-none d-sm-inline-block float-right">
+        <a href="" class="nav-link">Home Trang Chủ</a>
       </li>
     </ul>
 
