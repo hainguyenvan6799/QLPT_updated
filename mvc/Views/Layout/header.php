@@ -12,7 +12,7 @@
                         <a href="Register/getFormRegister" class="btn"><span class="fa fa-pencil-square-o"></span> Đăng kí</a>
                     <?php }else{ ?>
                       <?php if(isset($_SESSION['admin'])){ ?>
-                        <a class="btn"><span class="fa fa-user-circle-o"></span>Đến trang quản trị</a>
+                        <a class="btn" href="Amin/Home"><span class="fa fa-user-circle-o"></span>Đến trang quản trị</a>
                       <?php }else{ ?>
                         <a class="btn"><span class="fa fa-user-circle-o"></span> Xin chào <?php echo $_SESSION["name"]; ?></a>
                       <?php } ?>
