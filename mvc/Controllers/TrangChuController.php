@@ -6,19 +6,16 @@
 		}
 		public function Home(){
 			$user_login = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : '';
-			$getFriends = parent::$userModel->getFriendsOfUser($user_login);
-			$getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
+			$countMessageFromAdmin = parent::$messageModel->countMessageNoRead(0);
+			// $getFriends = parent::$userModel->getFriendsOfUser($user_login);
+			// $getNoFriends = parent::$userModel->getUserAreNotFriends($user_login);
 			$this->view("TrangChu",[
-				'getFriends' => $getFriends,
+				// 'getFriends' => $getFriends,
 				"page"=>"TrangChu/DSPT-TrangChu",
 				"data"=> parent::$Model->XemDSPhong_Them_PhongTrong(),
-				'getNoFriends' => $getNoFriends
+				"countMessageFromAdmin" => $countMessageFromAdmin
+				// 'getNoFriends' => $getNoFriends
 			]);
-
-			// Test data
-			// parent::$userModel->test();
-			// $getFriends = parent::$userModel->getFriendsOfUser(1);
-			// var_dump($getFriends);
 		}
 		public function XemChiTiet($maphong){
 					$this->view("TrangChu",[

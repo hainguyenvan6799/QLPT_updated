@@ -274,7 +274,24 @@ form:after {
 {
     display: none;
 }
+@media screen and (min-width: 400px)
+{
+    #content
+    {
+        border: 1px solid black;
+        margin-left: 30px !important;
+    }
+}
+@media screen and (min-width: 900px)
+{
+    #content
+    {
+        margin-left: 250px !important;
+    }
+}
+
     </style>
+
 
     
 </head>

@@ -39,12 +39,12 @@
 
 			$basic  = new Nexmo\Client\Credentials\Basic('fdcdea23', 'sZVUpf56shf5IqgK');
 			$client = new Nexmo\Client($basic);
-
+			
 
 
 			$message = $client->message()->send([
-			    'to' => '+84379343794',
-			    'from' => 'NXSMS',
+			    'to' => '84368945209',
+			    'from' => 'NVH',
 			    'text' => 'Hello Xin Chao'
 			]);
 

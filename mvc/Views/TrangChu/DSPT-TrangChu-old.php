@@ -2,7 +2,10 @@
     <!--/banner-bottom -->
         <link rel="stylesheet" href="client/css/style.css" type="text/css" media="all" />
 
-<div class="col-md-12">
+<?php 
+    $class = isset($_SESSION["user_id"]) ? 'col-md-9' : 'col-md-12';
+ ?>
+<div class="<?php echo $class; ?>">
     
     <section class="banner-bottom py-5">
         <h2 class="text-center mt-4 text-danger" style="text-decoration: underline;">Danh sách phòng trọ</h2>

@@ -20,6 +20,7 @@
     <!-- //font-awesome-icons -->
     <!-- /Fonts -->
     <link href="//fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nerko+One&display=swap" rel="stylesheet">
     <!-- //Fonts -->
     <!-- Nhật -->   
     <!------ Include the above in your HEAD tag ---------->
