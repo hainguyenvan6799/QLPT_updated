@@ -17,7 +17,16 @@ function openMiniBoxChat(chatWith_id){
                 $('#qnimate').addClass('popup-box-on');
                 if(chatWith_id == 0)
                 {
-                    $('.popup-head-left').html("Chủ trọ");
+                    $('.popup-head-left').html("Admin");
+                    $.get('ChatRealtime/checkStatus/'+chatWith_id, function(data){
+                        $('#status').html(data);
+                    });
+                    setInterval(function(){
+                        $.get('ChatRealtime/checkStatus/'+chatWith_id, function(data){
+                        $('#status').html(data);
+                    });
+                    }, 3000);
+                    
                 }
                 else
                 {

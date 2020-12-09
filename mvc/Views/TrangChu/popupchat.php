@@ -1,9 +1,13 @@
 <div class="popup-box chat-popup" id="qnimate" style="border: 3px solid black;">
-              <div class="popup-head">
+              <div class="popup-head" style="position: relative">
 
                 <div class="popup-head-left pull-left">
-                </div>
 
+                     
+                </div>
+                <div id="status" style="position: absolute; top: 30px; font-size: 10px;">
+                        
+                </div>  
                 <div class="popup-head-right pull-right">
                     <div class="btn-group">
                       <button class="chat-header-button" data-toggle="dropdown" type="button" aria-expanded="false">

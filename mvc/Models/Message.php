@@ -92,20 +92,20 @@
 
 		public function time_elapsed_B($secs){
 		    $bit = array(
-		        ' năm'        => $secs / 31556926 % 12,
-		        ' tuần'        => $secs / 604800 % 52,
-		        ' ngày'        => $secs / 86400 % 7,
-		        ' giờ'        => $secs / 3600 % 24,
-		        ' phút'    => $secs / 60 % 60,
-		        ' giây'    => $secs % 60
+		        ' years'        => $secs / 31556926 % 12,
+		        ' weeks'        => $secs / 604800 % 52,
+		        ' days'        => $secs / 86400 % 7,
+		        ' hours'        => $secs / 3600 % 24,
+		        ' minutes'    => $secs / 60 % 60,
+		        ' seconds'    => $secs % 60
 		        );
 		       
 		    foreach($bit as $k => $v){
 		        if($v > 1)$ret[] = $v . $k ;
 		        if($v == 1)$ret[] = $v . $k;
 		        }
-		    array_splice($ret, count($ret)-1, 0, 'và');
-		    $ret[] = 'trước.';
+		    array_splice($ret, count($ret)-1, 0, 'and');
+		    $ret[] = 'ago.';
 		   
 		    return join(' ', $ret);
 		}

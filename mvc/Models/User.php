@@ -9,7 +9,7 @@
 		}
 		public function showUser($user_id)
 		{
-			$user = parent::$userCollection->findOne(['user_id' => $user_id]);
+			$user = parent::$userCollection->findOne(['user_id' => (int)$user_id]);
 			return $user;
 		}
 		public function createNewUser($username, $password){
