@@ -17,6 +17,11 @@
 			$getId = parent::$lastIdCollection->findOne([
 				'id'=>"last_id_for_collection"
 			]);
+
+			$text = md5($username) . md5($password);
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
+			$time = strtotime(date('y-m-d H:i:s'));
+
 			$document = array(
 				"username" =>  $username,
 				"name" => "user_" . $getId->user_id,
@@ -25,6 +30,8 @@
 				"last_login" => date("Y-m-d H:i:s"),
 				"relationship" => [],
 				"phanquyen" => 1, //khachthue
+				"qrcode" => $text,
+				"qrcode_expire" => $time + 3600
 			);
 
 			$result = parent::$userCollection->insertOne($document);

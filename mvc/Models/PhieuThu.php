@@ -58,7 +58,7 @@ class PhieuThu extends DB
 			CURLOPT_TIMEOUT => 30,
 			CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
 			CURLOPT_CUSTOMREQUEST => "POST",
-			CURLOPT_POSTFIELDS => "To=%2B84379343794&Body=".$body."&MediaUrl=http%3A%2F%2F2.bp.blogspot.com%2F-tp4OYnOprzw%2FUOUu5_RWVdI%2FAAAAAAAAAao%2Fktf-2L5p5Jo%2Fs1600%2Fnhung-hinh-anh-dep-dong-vat.jpg&From=%2B19292978442",
+			CURLOPT_POSTFIELDS => "To=%2B84379343794&Body=".$Content."&MediaUrl=http%3A%2F%2F2.bp.blogspot.com%2F-tp4OYnOprzw%2FUOUu5_RWVdI%2FAAAAAAAAAao%2Fktf-2L5p5Jo%2Fs1600%2Fnhung-hinh-anh-dep-dong-vat.jpg&From=%2B19292978442",
 			CURLOPT_HTTPHEADER => array(
 				"authorization: Basic QUMxNjU0MmNiYWY5NzhjMGM5NTJjNWJiZTAyZDFkOTIxNDpmYTEyYjA2NjkwYjVlOWNkN2Q5N2QyMDA1MDUxZjE3Zg==",
 				"cache-control: no-cache",
