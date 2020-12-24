@@ -29,8 +29,6 @@
             <?php if(isset($_SESSION['user_id'])){ ?>
                 <?php if($data['countMessageFromAdmin'] > 0){ ?>
                     <span id="countMessageFromAdmin"><?php echo $data['countMessageFromAdmin']; ?></span>
-                <?php }else{ ?>
-                    <span id="countMessageFromAdmin">0</span>
                 <?php } ?>
             <?php } ?>
             <a id="inbox">Inbox</a>

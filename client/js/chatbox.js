@@ -13,7 +13,8 @@
                 }
                 $('#addClass').css("display", "none");
                 $('#inbox').css("display", "none");
-                $('#countMessageFromAdmin').css('display', 'none');
+                // $('#countMessageFromAdmin').css('display', 'none');
+                $('#countMessageFromAdmin').remove();
                 $('#qnimate').addClass('popup-box-on');
                 if(chatWith_id == 0)
                 {
@@ -132,10 +133,10 @@
                 {
                     $('#countMessageFromAdmin').html(pending + 1);    
                 }
-                // else
-                // {   
-                //     $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
-                // }
+                else
+                {   
+                    $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
+                }
         }
         });
             // alert(user_id); // 1
@@ -236,8 +237,8 @@
     $('#qnimate').removeClass('popup-box-on');
     $('#addClass').css("display", "block");
     $('#inbox').css("display", "block");
-    $('#countMessageFromAdmin').css('display', 'block');
-    $('#countMessageFromAdmin').html(0);
+    // $('#countMessageFromAdmin').css('display', 'block');
+    // $('#countMessageFromAdmin').html(0);
 });
 
 
