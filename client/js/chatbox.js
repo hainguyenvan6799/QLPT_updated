@@ -13,8 +13,8 @@
                 }
                 $('#addClass').css("display", "none");
                 $('#inbox').css("display", "none");
-                // $('#countMessageFromAdmin').css('display', 'none');
-                $('#countMessageFromAdmin').remove();
+                $('#countMessageFromAdmin').css('display', 'none');
+                // $('#countMessageFromAdmin').remove();
                 $('#qnimate').addClass('popup-box-on');
                 if(chatWith_id == 0)
                 {
@@ -135,7 +135,14 @@
                 }
                 else
                 {   
-                    $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
+                    if($('#countMessageFromAdmin').length)
+                    {
+                        $('#countMessageFromAdmin').html(1);       
+                    }else
+                    {
+                        $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');    
+                    }
+                    
                 }
         }
         });
@@ -237,8 +244,8 @@
     $('#qnimate').removeClass('popup-box-on');
     $('#addClass').css("display", "block");
     $('#inbox').css("display", "block");
-    // $('#countMessageFromAdmin').css('display', 'block');
-    // $('#countMessageFromAdmin').html(0);
+    $('#countMessageFromAdmin').css('display', 'block');
+    $('#countMessageFromAdmin').html(0);
 });
 
 
