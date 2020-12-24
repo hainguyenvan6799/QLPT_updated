@@ -18,14 +18,14 @@
         <?php
               require_once "mvc/Views/".$data["page"].".php"; // nếu trang Home sẽ load DSPT-TRangChu.php, nêú bấm xem chi tiết thì sẽ load TrangChu/XemChiTiet.php
               ?>
-    </div>
+          </div>
 
           <!-- popup chat -->
           <?php require_once "mvc/Views/TrangChu/popupchat.php"; ?>        
           <!-- popupchat -->
 
           <!-- click button to open popup chatbox -->
-          <div id="notification-messages">
+        <div id="notification-messages">
             <?php if(isset($_SESSION['user_id'])){ ?>
                 <?php if($data['countMessageFromAdmin'] > 0){ ?>
                     <span id="countMessageFromAdmin"><?php echo $data['countMessageFromAdmin']; ?></span>

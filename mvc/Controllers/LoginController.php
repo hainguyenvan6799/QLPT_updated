@@ -8,6 +8,11 @@
 		public function __construct(){
 			parent::__construct();
 		}
+		public function loginQrCode(){
+			$contentQRCode = isset($_POST["content"]) ? $_POST["content"] : null;
+			$a = parent::$userModel->loginQrCode($contentQRCode);
+			
+		}
 		public function getFormLogin(){
 			$this->view("Login/loginForm");
 		}
@@ -23,10 +28,6 @@
 				echo '<script>window.location.href="Login/getFormLogin";</script>';
 			}
 		}
-		public function loginQrCode(){
-			$contentQRCode = isset($_POST["content"]) ? $_POST["content"] : null;
-			$a = parent::$userModel->loginQrCode($contentQRCode);
-			
-		}
+		
 	}
  ?>

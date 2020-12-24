@@ -68,10 +68,11 @@
                     <!-- <input type="submit" name="submit" value="Gửi"> -->
 
                     <div class="btn-footer">
+
                         <div class="input-text col-md-12">
                             <input type="text" name="message" class="submit col-md-12" style="border: 3px solid black;" id="typeMessage" placeholder="Enter to send Message" autocomplete="off">
-                            <!-- <input type="submit" name="submit" value="Gửi" class="col-md-2 btn btn-primary" style="margin-left: 10px; margin-top: 9px; width: 100%; height: 100%;"> -->
                         </div>
+
                 <!-- <button class="bg_none"><i class="glyphicon glyphicon-film"></i> </button>
                 <button class="bg_none"><i class="glyphicon glyphicon-camera"></i> </button>
                 <button class="bg_none"><i class="glyphicon glyphicon-paperclip"></i> </button>

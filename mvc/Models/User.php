@@ -24,7 +24,7 @@
 
 			$document = array(
 				"username" =>  $username,
-				"name" => "user_" . $getId->user_id,
+				"name" => "user_" . $getId->user_id+1,
 				"user_id" => $getId->user_id + 1,
 				"password" => $password,
 				"last_login" => date("Y-m-d H:i:s"),
@@ -210,24 +210,13 @@
 			if($result)
 			{
 				if($time <= $result->qrcode_expire){
-				// $_SESSION["username"] = $username;
-				// $_SESSION["password"] = $password;
-				// $_SESSION["user_type"] = "user";
-				// echo $_SESSION["username"];
-
-					// echo $r->username . '<br>';
-					// $_SESSION["user_id"] = $r->user_id;
-					// $_SESSION["name"] = $r->name;
+				
 					$_SESSION["phanquyen"] = $result->phanquyen;
-					// echo $r->user_id;
+					
 					if($_SESSION["phanquyen"]==0) //admin
 					{
 						$_SESSION["admin"] = $result->user_id;
-						// echo '<script>window.location.href="../Admin/Home";</script>';
-					}
-					else
-					{
-						// echo '<script>window.location.href="../";</script>';
+						
 					}
 					$_SESSION["user_id"] = $result->user_id;
 					$_SESSION["name"] = $result->name;
@@ -240,7 +229,6 @@
  			}
 			else
 			{
-				// echo '<script>window.location.href="../Login/getFormLogin";</script>';
 				$a = 0;
 				echo $a;
 			}

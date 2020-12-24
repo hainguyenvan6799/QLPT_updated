@@ -1,12 +1,12 @@
-var my_id = $('#my_id').val() || null;
-let user_id = 0;
-let friend_id = 0;
-let chutro_id = null;
-let friendClass;
-let name = '';
-let updateTimeOnline;
-let userOnline;
-function openMiniBoxChat(chatWith_id){
+            var my_id = $('#my_id').val() || null;
+            let user_id = 0;
+            let friend_id = 0;
+            let chutro_id = null;
+            let friendClass;
+            let name = '';
+            let updateTimeOnline;
+            let userOnline;
+            function openMiniBoxChat(chatWith_id){
                 if(my_id == null) // user is logining
                 {
                     window.location.href = "Login/getFormLogin";
@@ -23,8 +23,8 @@ function openMiniBoxChat(chatWith_id){
                     });
                     setInterval(function(){
                         $.get('ChatRealtime/checkStatus/'+chatWith_id, function(data){
-                        $('#status').html(data);
-                    });
+                            $('#status').html(data);
+                        });
                     }, 3000);
                     
                 }
@@ -100,10 +100,11 @@ function openMiniBoxChat(chatWith_id){
             clearInterval(updateTimeOnline);
             clearInterval(userOnline);
         });
+
         Pusher.logToConsole = true;
         var pusher = new Pusher('ed3cf9bac608e3b56afa', {
           cluster: 'eu'
-      });
+        });
 
         var channel = pusher.subscribe('my-channel');
         channel.bind('my-event', function(data) {
@@ -127,15 +128,17 @@ function openMiniBoxChat(chatWith_id){
         else if(my_id == data["to"])
         {
             var pending = parseInt($('#countMessageFromAdmin').html());
-            if(pending)
-            {
-                $('#countMessageFromAdmin').html(pending + 1);    
-            }
-            else
-            {
-                $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
-            }
-            
+                if(pending)
+                {
+                    $('#countMessageFromAdmin').html(pending + 1);    
+                }
+                else
+                {
+                    $('#countMessageFromAdmin').remove();   
+                    $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
+                }
+        }
+        });
             // alert(user_id); // 1
             // alert(my_id);
             // if(data["from"] == friend_id)
@@ -166,7 +169,7 @@ function openMiniBoxChat(chatWith_id){
             //     if(alertMessage)
             //     {
             //         $('#alert-message').html('<div id="'+data["from"]+'"><h5>Bạn có tin nhắn mới từ '+ data["name"] +'</h5><span id="countNoReadFrom_'+data["from"]+'">'+(alertMessage+1) + '</span></div>');    
-                    
+
             //     }
             //     else
             //     {
@@ -190,8 +193,7 @@ function openMiniBoxChat(chatWith_id){
             //         $("#" + data["from"]).append('<span class="pending">1</span>');
             //     }
             // }
-        }
-    });
+        
 
 
 
@@ -241,10 +243,10 @@ function openMiniBoxChat(chatWith_id){
 
 
 
-  function enterToSendMessage(message, sendto_id){
-    $('#typeMessage').val('');
-    if(message != '')
-    {
+              function enterToSendMessage(message, sendto_id){
+                $('#typeMessage').val('');
+                if(message != '')
+                {
                     // alert(message);
                     var dataStr = "received_id=" + sendto_id + "&message=" + message;
                     $.ajax({
