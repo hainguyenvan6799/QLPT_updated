@@ -132,11 +132,10 @@
                 {
                     $('#countMessageFromAdmin').html(pending + 1);    
                 }
-                else
-                {
-                    $('#countMessageFromAdmin').remove();   
-                    $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
-                }
+                // else
+                // {   
+                //     $('#notification-messages').append('<span id="countMessageFromAdmin">1</span>');
+                // }
         }
         });
             // alert(user_id); // 1
