@@ -109,5 +109,16 @@
 		   
 		    return join(' ', $ret);
 		}
+
+		public function countMessageToAdmin(){
+			$count = parent::$messageCollection->find([
+				'$and' => [
+					["to"=> (int)0],
+					['is_read' => (int)0]
+				]
+			]);
+
+			return $count;
+		}
 	}
  ?>

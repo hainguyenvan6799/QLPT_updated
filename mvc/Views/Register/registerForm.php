@@ -253,7 +253,7 @@ form:after {
         <form action="../Register/postFormRegister" method="post">
             <h1>Đăng kí</h1>
             <div>
-                <input type="text" placeholder="Email or Phone Number" required="" id="username" name="username" />
+                <input type="text" placeholder="Email or Phone Number" required="" id="username" name="username" autocomplete="off" />
             </div>
             <div>
                 <input type="password" placeholder="Password" required="" id="password" name="password" />

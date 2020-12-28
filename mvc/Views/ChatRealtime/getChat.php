@@ -205,7 +205,7 @@
 		            </div>
 
 		            <div class="input-text">
-		                <input type="text" name="message" class="submit" id="typeMessage">
+		                <input type="text" name="message" class="submit" id="typeMessage" autocomplete="off">
 		                <input type="submit" name="submit" value="Gửi">
 		            </div>
 

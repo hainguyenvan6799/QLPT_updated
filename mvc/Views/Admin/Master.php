@@ -18,6 +18,23 @@ if(!isset($_SESSION["admin"]))
   <link rel="stylesheet" href="client/dist/css/adminlte.min.css">
   <!-- overlayScrollbars -->
   <link rel="stylesheet" href="client/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <style>
+    #messageAdminHome
+    {
+      position: relative;
+    }
+    #alertMessageInAdminHome
+    {
+      position: absolute;
+      top: 10;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      border-radius: 50%;
+      text-align: center;
+      display: none;
+    }
+  </style>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -36,7 +53,7 @@ if(!isset($_SESSION["admin"]))
         <a href="Login/logout" class="nav-link">Đăng xuất</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block float-right">
-        <a href="ChatRealtime/getChatView" class="nav-link">Message</a>
+        <a href="ChatRealtime/getChatView" class="nav-link" id="messageAdminHome">Message<span id="alertMessageInAdminHome"></span></a>
       </li>
 
       <li class="nav-item d-none d-sm-inline-block float-right">
@@ -258,6 +275,18 @@ if(!isset($_SESSION["admin"]))
 <!-- AdminLTE App -->
 <script src="client/dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
-
+<script type="text/javascript">
+  $(document).ready(function(){
+    setInterval(() => {
+            $.get("ChatRealtime/countMessageToAdmin", function(data)
+            {
+                if(data[data.length - 1] > 0)
+                {
+                    $('#alertMessageInAdminHome').css("display", "block");
+                }
+            });
+        }, 10000);
+  });
+</script>
 </body>
 </html>

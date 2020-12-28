@@ -301,7 +301,7 @@ form:after {
         <form action="Login/postFormLogin" method="post">
             <h1>Đăng nhập</h1>
             <div>
-                <input type="text" placeholder="Email or Phone Number" required id="username" name="username" autofocus="" />
+                <input type="text" placeholder="Email or Phone Number" required id="username" name="username" autofocus="" autocomplete="off" />
             </div>
             <div>
                 <input type="password" placeholder="Password" required id="password" name="password" />

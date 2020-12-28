@@ -110,8 +110,6 @@
         var channel = pusher.subscribe('my-channel');
         channel.bind('my-event', function(data) {
           // alert(JSON.stringify(data));
-          // alert(typeof(data["from"]) + data["from"]);
-          // alert(typeof(my_id) + my_id);
           if(data["from"] == my_id)
           {
             if(chutro_id == 0)
@@ -238,6 +236,10 @@
 
   $('#inbox').on('click', function(){
     chutro_id = 0;
+    if(my_id == chutro_id)
+    {
+        window.location.href = "Admin/Home";
+    }
     openMiniBoxChat(0);
 });
   $("#removeClass").click(function () {
