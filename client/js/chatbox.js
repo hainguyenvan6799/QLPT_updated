@@ -236,6 +236,7 @@
 
   $('#inbox').on('click', function(){
     chutro_id = 0;
+    alert(my_id + typeof(my_id) + typeof(chutro_id));
     if(my_id == chutro_id)
     {
         window.location.href = "Admin/Home";
