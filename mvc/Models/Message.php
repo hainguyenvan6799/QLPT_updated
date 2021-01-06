@@ -114,7 +114,7 @@
 		}
 
 		public function countMessageToAdmin(){
-			$count = parent::$messageCollection->countcount([
+			$count = parent::$messageCollection->count([
 				'$and' => [
 					["to"=> (int)0],
 					['is_read' => (int)0]
