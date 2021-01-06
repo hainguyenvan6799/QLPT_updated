@@ -10,18 +10,27 @@
 		public function getMessageFromMeToUser($user_id)
 		{
 			$my_id = $_SESSION['user_id'];
+			
 			$filter =['$or' => [
 				[ '$and' => [ ['from'=>$my_id], ['to'=>(int)$user_id] ] ],
 				 ['$and' => [ ['from'=>(int)$user_id], ['to' => $my_id] ]]
 			] ];
+
+			$message =  parent::$messageCollection->find($filter);
+
+			parent::$messageCollection->updateMany(
+				[ 'from' => (int)$user_id, 'to'=> (int)$my_id, 'is_read' => 0],
+			    ['$set' => ['is_read' => 1]],
+			    ['multi' => true, 'upsert' => false]
+			);
+			return $message;
+
 			// $this->query = new MongoDB\Driver\Query($this->filter, $this->options);
 			// $message = $this->mongoConnection->executeQuery("phongtrodb.message", $this->query);
 			// foreach($message as $m)
 			// {
 			// 	echo $m->message;
 			// }
-
-			$message =  parent::$messageCollection->find($filter);
 
 			// $bulk = new MongoDB\Driver\BulkWrite;
 			// $bulk->update(
@@ -31,16 +40,12 @@
 			// );
 
 			// $result = $this->mongoConnection->executeBulkWrite("phongtrodb.message", $bulk);
-			parent::$messageCollection->updateMany(
-				[ 'from' => (int)$user_id, 'to'=> (int)$my_id, 'is_read' => 0],
-			    ['$set' => ['is_read' => 1]],
-			    ['multi' => true, 'upsert' => false]
-			);
-			return $message;
+			
 		}
 
 		public function createMessage($from, $to, $message, $is_read){
 			// $messageCollection = (new MongoDB\Client)->phongtrodb->message;
+
 			date_default_timezone_set('Asia/Ho_Chi_Minh');
 			$document = [
 				"from" => $from,
@@ -50,6 +55,7 @@
 				"time" => date("Y-m-d H:i:s")
 			];
 			parent::$messageCollection->insertOne($document);
+
 		}
 
 		public function countMessageNoRead($from){
@@ -77,10 +83,7 @@
 						"_id" => null,
 						"count" => ['$sum' => 1]
 					]
-				]
-
-
-					
+				]	
 			];
 			$result = parent::$messageCollection->aggregate($ops);
 			foreach($result as $r)
@@ -111,7 +114,7 @@
 		}
 
 		public function countMessageToAdmin(){
-			$count = parent::$messageCollection->find([
+			$count = parent::$messageCollection->countcount([
 				'$and' => [
 					["to"=> (int)0],
 					['is_read' => (int)0]

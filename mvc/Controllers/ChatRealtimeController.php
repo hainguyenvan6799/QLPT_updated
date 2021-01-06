@@ -133,16 +133,7 @@
 		}
 
 		public function countMessageToAdmin(){
-			$messages = parent::$messageModel->countMessageToAdmin();
-			$count = 0;
-			foreach($messages as $m)
-			{
-				if($m->message != "")
-				{
-					$count = 1;
-				}
-				break;
-			}
+			$count = parent::$messageModel->countMessageToAdmin();
 			echo $count;
 		}
 	}
