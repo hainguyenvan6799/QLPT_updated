@@ -288,7 +288,7 @@ if(!isset($_SESSION["admin"]))
                   $('#alertMessageInAdminHome').css("display", "none");
                 }
             });
-        }, 10000);
+        }, 2000);
   });
 </script>
 </body>
