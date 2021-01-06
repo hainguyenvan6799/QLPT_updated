@@ -284,6 +284,9 @@ if(!isset($_SESSION["admin"]))
                 {
                     $('#alertMessageInAdminHome').css("display", "block");
                 }
+                else{
+                  $('#alertMessageInAdminHome').css("display", "none");
+                }
             });
         }, 10000);
   });
