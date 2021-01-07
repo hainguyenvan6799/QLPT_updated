@@ -24,6 +24,11 @@
           <?php require_once "mvc/Views/TrangChu/popupchat.php"; ?>        
           <!-- popupchat -->
 
+        <?php 
+            $a = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : null;
+        ?>
+            <input type="hidden" name="user_logining" id="user_logining" value="<?php echo $a; ?>"> 
+
           <!-- click button to open popup chatbox -->
         <div id="notification-messages">
             <?php if(isset($_SESSION['user_id'])){ ?>

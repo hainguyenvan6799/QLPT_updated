@@ -24,10 +24,6 @@
             </div>
         </div>
         <div class="popup-messages" style="overflow: auto">
-            <?php 
-            $a = isset($_SESSION["user_id"]) ? $_SESSION["user_id"] : null;
-            ?>
-            <input type="hidden" name="my_id" id="my_id" value="<?php echo $a; ?>"> 
             <div class="col-md-12" id="messages" style="margin-top: 5px; margin-bottom: 15px;">
                 <div class="message-wrapper">
                     <ul class="messages">

@@ -24,7 +24,7 @@
 
 			$document = array(
 				"username" =>  $username,
-				"name" => "user_" . $getId->user_id+1,
+				"name" => "user_" . ($getId->user_id+1),
 				"user_id" => $getId->user_id + 1,
 				"password" => $password,
 				"last_login" => date("Y-m-d H:i:s"),
@@ -55,6 +55,7 @@
 			// $userCollection = (new MongoDB\Client)->phongtrodb->users;
 			// $this->filter =['$and' => [['username'=> $username], ['password'=>$password]]];
 			// $this->options = [];
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
 			$result = parent::$userCollection->findOne(['username'=>$username, 'password'=>$password]);
 			if($result)
 			{
@@ -67,6 +68,14 @@
 					// $_SESSION["user_id"] = $r->user_id;
 					// $_SESSION["name"] = $r->name;
 					$_SESSION["phanquyen"] = $result->phanquyen;
+					$_SESSION["user_id"] = $result->user_id;
+					$_SESSION["name"] = $result->name;
+					$_SESSION["username"] = md5($result->username);
+					$_SESSION["password"] = md5($result->password);
+					parent::$userCollection->updateOne(
+						['user_id' => $result->user_id],
+						['$set' => ['last_login' => date("Y-m-d H:i:s")]]
+					);
 					// echo $r->user_id;
 					if($_SESSION["phanquyen"]==0) //admin
 					{
@@ -77,10 +86,9 @@
 					{
 						echo '<script>window.location.href="";</script>';
 					}
-					$_SESSION["user_id"] = $result->user_id;
-					$_SESSION["name"] = $result->name;
-					$_SESSION["username"] = md5($result->username);
-					$_SESSION["password"] = md5($result->password);
+					
+
+					
  			}
 			else
 			{
