@@ -120,6 +120,7 @@
             else
             {
                 // friendClass.click();
+                alert("co tin nhan moi tu admin");
                 $('#' + friend_id).click();
             }
             
