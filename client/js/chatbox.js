@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	let user_logining = $("#user_logining").val() || null;
+	let user_logining = null;
 	let openMiniBoxChat; // function
 	let scrollToBottomFunc; //function
 	let enterToSendMessage; // function
@@ -12,6 +12,7 @@ $(document).ready(function(){
 
 		// user is loginning click inbox button in TrangChu.php
 		$('#inbox').on('click', function(){
+			user_logining = $("#user_logining").val();
 			if(user_logining != null)
 			{
 				if(user_logining == 0)
