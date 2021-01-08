@@ -12,6 +12,15 @@
 			$user = parent::$userCollection->findOne(['user_id' => (int)$user_id]);
 			return $user;
 		}
+
+		public function updateActivateUser($user_id)
+		{
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
+			parent::$userCollection->updateOne(
+				['user_id' => $user_id],
+				['$set' => ['last_login' => date('y-m-d H:i:s')]]	
+			);
+		}
 		public function createNewUser($username, $password){
 			// $lastIdCollection = (new MongoDB\Client)->phongtrodb->last_id_collection;
 			$getId = parent::$lastIdCollection->findOne([

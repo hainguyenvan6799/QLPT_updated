@@ -117,19 +117,22 @@
 		}
 
 		public function checkStatus($chatWith_id){
+			date_default_timezone_set('Asia/Ho_Chi_Minh');
 			$user = parent::$userModel->showUser($chatWith_id);
+			parent::$userModel->updateActivateUser($chatWith_id);
 			$timestamp = strtotime(date('Y-m-d H:i:s'));
 			$time = strtotime(date('Y-m-d H:i:s')) - 5;
 			$user_last_login = strtotime($user->last_login);
-			if($user_last_login > $time)
-			{
-				echo "Online";
-			}
-			else
-			{
-				$delta = parent::$messageModel->time_elapsed_B($timestamp - $user_last_login);
-				echo "Offline " . $delta;
-			}
+			echo $user->last_login;
+			// if($user_last_login > $time)
+			// {
+			// 	echo "Online";
+			// }
+			// else
+			// {
+			// 	$delta = parent::$messageModel->time_elapsed_B($user_last_login - $timestamp);
+			// 	echo "Offline " . $delta;
+			// }
 		}
 
 		public function countMessageToAdmin(){

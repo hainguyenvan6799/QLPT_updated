@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	let user_logining = null;
+	let user_logining;
 	let openMiniBoxChat; // function
 	let scrollToBottomFunc; //function
 	let enterToSendMessage; // function
@@ -13,7 +13,11 @@ $(document).ready(function(){
 		// user is loginning click inbox button in TrangChu.php
 		$('#inbox').on('click', function(){
 			user_logining = $("#user_logining").val();
-			if(user_logining != null)
+			if(user_logining == "")
+			{
+				window.location.href = "Login/getFormLogin";
+			}
+			else
 			{
 				if(user_logining == 0)
 				{
@@ -24,11 +28,6 @@ $(document).ready(function(){
 					checkChatWithAdmin = 1;
 					openMiniBoxChat(user_admin_id);
 				}
-				
-			}
-			else if (user_logining == null)
-			{
-				window.location.href = "Login/getFormLogin";
 			}
 		});
 

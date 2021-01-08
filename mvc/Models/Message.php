@@ -104,8 +104,14 @@
 		        );
 		       
 		    foreach($bit as $k => $v){
-		        if($v > 1)$ret[] = $v . $k ;
-		        if($v == 1)$ret[] = $v . $k;
+				if($v > 1)
+				{
+					$ret[] = $v . $k ;
+				}
+				if($v == 1)
+				{
+					$ret[] = $v . $k;
+				}
 		        }
 		    array_splice($ret, count($ret)-1, 0, 'and');
 		    $ret[] = 'ago.';
